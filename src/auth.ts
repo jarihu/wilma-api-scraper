@@ -1,9 +1,9 @@
 import { AxiosInstance, AxiosResponse } from 'axios';
-import { WilmaHttpClient, userAgent } from './http';
-import { ChildParser, ChildWithSchool } from './parser';
-import { ExamsClient } from './exams';
-import { MessagesClient } from './messages';
-import { OverviewClient } from './overview';
+import { WilmaHttpClient, userAgent } from './http.js';
+import { ChildParser, ChildWithSchool } from './parser.js';
+import { ExamsClient } from './exams.js';
+import { MessagesClient } from './messages.js';
+import { OverviewClient } from './overview.js';
 
 /**
  * Token response from Wilma server

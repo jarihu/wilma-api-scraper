@@ -17,24 +17,24 @@ export {
   isWilmaParseError,
   isWilmaSessionError,
   isWilmaValidationError
-} from './errors';
+} from './errors.js';
 
 // HTTP utilities
-export { WilmaHttpClient, createWilmaClient, userAgent } from './http';
+export { WilmaHttpClient, createWilmaClient, userAgent } from './http.js';
 
 // Authentication
-export { WilmaAuthClient } from './auth';
-export type { WilmaAuthConfig, ChildWithSchool, ChildEntry, SchoolAndClass } from './auth';
+export { WilmaAuthClient } from './auth.js';
+export type { WilmaAuthConfig, ChildWithSchool, ChildEntry, SchoolAndClass } from './auth.js';
 
 // Parser - child entries
-export { ChildParser } from './parser';
+export { ChildParser } from './parser.js';
 
 // Exams
-export { ExamsClient } from './exams';
-export type { ExamEntry } from './exams';
+export { ExamsClient } from './exams.js';
+export type { ExamEntry } from './exams.js';
 
 // Overview
-export { OverviewParser, OverviewClient } from './overview';
+export { OverviewParser, OverviewClient } from './overview.js';
 export type { 
   Overview, 
   OverviewExam, 
@@ -43,17 +43,17 @@ export type {
   HomeworkEntry as OverviewHomeworkEntry,
   DiaryEntry,
   Teacher
-} from './overview';
+} from './overview.js';
 
 // Messages
-export { MessagesClient } from './messages';
-export { MessageDetailService } from './messages_detail_helper';
-export type { MessageListItem } from './messages';
-export type { MessageDetail } from './messages_detail_helper';
+export { MessagesClient } from './messages.js';
+export { MessageDetailService } from './messages_detail_helper.js';
+export type { MessageListItem } from './messages.js';
+export type { MessageDetail } from './messages_detail_helper.js';
 
 // Homework
-export { HomeworkExtractor } from './homework';
-export type { HomeworkEntry } from './homework';
+export { HomeworkExtractor } from './homework.js';
+export type { HomeworkEntry } from './homework.js';
 
 // Re-export types from axios
 export type { AxiosInstance, AxiosResponse } from 'axios';

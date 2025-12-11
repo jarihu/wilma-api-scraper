@@ -4,8 +4,8 @@
 
 import * as cheerio from 'cheerio';
 import { AxiosInstance } from 'axios';
-import { MessageDetailService, MessageDetail } from './messages_detail_helper';
-import { WilmaHttpClient } from './http';
+import { MessageDetailService, MessageDetail } from './messages_detail_helper.js';
+import { WilmaHttpClient } from './http.js';
 
 export interface MessageListItem {
   id: string;

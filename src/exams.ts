@@ -2,7 +2,7 @@ import { AxiosInstance } from 'axios';
 import * as cheerio from 'cheerio';
 import { parse, startOfDay, isAfter, isEqual } from 'date-fns';
 import { fi } from 'date-fns/locale';
-import { WilmaHttpClient } from './http';
+import { WilmaHttpClient } from './http.js';
 
 /**
  * Parsed exam entry with dates and details

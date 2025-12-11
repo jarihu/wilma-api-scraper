@@ -1,7 +1,7 @@
 import { parse } from 'date-fns';
 import { fi } from 'date-fns/locale';
 import { AxiosInstance } from 'axios';
-import { WilmaHttpClient } from './http';
+import { WilmaHttpClient } from './http.js';
 
 /**
  * Teacher information
