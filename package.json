@@ -1,15 +1,7 @@
 {
-  "name": "wilma-api",
+  "name": "wilma-api-scraper",
   "version": "0.1.0",
   "description": "Pure TypeScript library for Wilma school information system API interaction and parsing",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "scripts": {
-    "build": "tsc",
-    "test": "vitest",
-    "test:watch": "vitest",
-    "lint": "eslint src --ext .ts"
-  },
   "keywords": [
     "wilma",
     "school",
@@ -18,16 +10,17 @@
     "ouka",
     "inschool"
   ],
-  "author": "https://github.com/jarihu",
-  "license": "MIT",
+  "homepage": "https://github.com/jarihu/wilma-api-scraper/#readme",
+  "bugs": {
+    "url": "https://github.com/jarihu/wilma-api-scraper/issues"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/wilma-api"
+    "url": "git+https://github.com/jarihu/wilma-api-scraper.git"
   },
-  "bugs": {
-    "url": "https://github.com/your-username/wilma-api/issues"
-  },
-  "homepage": "https://github.com/your-username/wilma-api#readme",
+  "license": "MIT",
+  "author": "https://github.com/jarihu",
+  "type": "module",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -35,14 +28,20 @@
       "require": "./dist/index.js"
     }
   },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
   "files": [
     "dist"
   ],
-  "devDependencies": {
-    "@types/node": "^24.10.1",
-    "@types/tough-cookie": "^4.0.5",
-    "typescript": "^5.9.3",
-    "vitest": "^4.0.15"
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest",
+    "test:watch": "vitest",
+    "lint": "eslint src --ext .ts"
   },
   "dependencies": {
     "axios": "^1.13.2",
@@ -50,5 +49,11 @@
     "cheerio": "^1.1.2",
     "date-fns": "^3.6.0",
     "tough-cookie": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "@types/tough-cookie": "^4.0.5",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.15"
   }
 }
