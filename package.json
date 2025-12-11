@@ -1,0 +1,54 @@
+{
+  "name": "wilma-api",
+  "version": "0.1.0",
+  "description": "Pure TypeScript library for Wilma school information system API interaction and parsing",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest",
+    "test:watch": "vitest",
+    "lint": "eslint src --ext .ts"
+  },
+  "keywords": [
+    "wilma",
+    "school",
+    "api",
+    "parser",
+    "ouka",
+    "inschool"
+  ],
+  "author": "https://github.com/jarihu",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/wilma-api"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/wilma-api/issues"
+  },
+  "homepage": "https://github.com/your-username/wilma-api#readme",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "@types/tough-cookie": "^4.0.5",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.15"
+  },
+  "dependencies": {
+    "axios": "^1.13.2",
+    "axios-cookiejar-support": "^6.0.5",
+    "cheerio": "^1.1.2",
+    "date-fns": "^3.6.0",
+    "tough-cookie": "^6.0.0"
+  }
+}
