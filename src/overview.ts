@@ -1,6 +1,7 @@
 import { parse } from 'date-fns';
 import { fi } from 'date-fns/locale';
 import { AxiosInstance } from 'axios';
+import { URL } from 'url';
 import { WilmaHttpClient } from './http.js';
 
 /**
@@ -204,11 +205,11 @@ export class OverviewParser {
  */
 export class OverviewClient {
   private client: AxiosInstance;
-  private baseUrl: string;
+  private baseUrl: URL;
 
-  constructor(client: AxiosInstance, baseUrl: string) {
+  constructor(client: AxiosInstance, baseUrl: string | URL) {
     this.client = client;
-    this.baseUrl = baseUrl;
+    this.baseUrl = typeof baseUrl === 'string' ? new URL(baseUrl) : baseUrl;
   }
 
   /**
@@ -219,10 +220,21 @@ export class OverviewClient {
    * @returns Promise resolving to the parsed Overview object
    */
   async fetchOverview(childId: string, date?: string, getFullMonth: boolean = true): Promise<Overview> {
-    const url = `${this.baseUrl}/!${childId}/overview`;
-    
+    // Try the JSON API endpoint first (overview_json), common on newer Wilma servers
+    try {
+      const apiUrl = new URL(`/overview_json?child=${childId}`, this.baseUrl).toString();
+      const apiRes = await this.client.get(apiUrl, { headers: { 'User-Agent': WilmaHttpClient.userAgent() } });
+      if (apiRes && apiRes.data) {
+        return OverviewParser.parseOverviewJson(apiRes.data, childId);
+      }
+    } catch (_e) {
+      // fall through to legacy HTML form flow
+    }
+
+    const url = new URL(`!${childId}/overview`, this.baseUrl).toString();
+
     // First, fetch the child's home page to get the formkey
-    const homeUrl = `${this.baseUrl}/!${childId}/`;
+    const homeUrl = new URL(`!${childId}/`, this.baseUrl).toString();
     const pageRes = await this.client.get(homeUrl, {
       headers: { 'User-Agent': WilmaHttpClient.userAgent() }
     });
@@ -261,38 +273,49 @@ export class OverviewClient {
    * @returns Promise resolving to the raw response data
    */
   async fetchOverviewRaw(childId: string, date?: string, getFullMonth: boolean = true): Promise<unknown> {
-    const url = `${this.baseUrl}/!${childId}/overview`;
-    
+    // Try the JSON API endpoint first (overview_json)
+    try {
+      const apiUrl = new URL(`/overview_json?child=${childId}`, this.baseUrl).toString();
+      const apiRes = await this.client.get(apiUrl, { headers: { 'User-Agent': WilmaHttpClient.userAgent() } });
+      if (apiRes && apiRes.data) {
+        return apiRes.data;
+      }
+    } catch (_e) {
+      // fallback to legacy form flow
+    }
+
+    const url = new URL(`!${childId}/overview`, this.baseUrl).toString();
+
     // First, fetch the child's home page to get the formkey
-    const homeUrl = `${this.baseUrl}/!${childId}/`;
+    const homeUrl = new URL(`!${childId}/`, this.baseUrl).toString();
     const pageRes = await this.client.get(homeUrl, {
       headers: { 'User-Agent': WilmaHttpClient.userAgent() }
     });
-    
+
     // Extract formkey from the HTML page
     const formkey = this.extractFormKey(pageRes.data, childId);
-    
+
     if (!formkey) {
       throw new Error('Failed to extract formkey from child home page');
     }
-    
+
     // Use current date if not provided
     const targetDate = date || new Date().toLocaleDateString('fi-FI');
-    
+
     // Make POST request with formkey
     const params = new URLSearchParams({
       date: targetDate,
       getfullmonth: String(getFullMonth),
       formkey: formkey
     });
-    
+
     const res = await this.client.post(url, params.toString(), {
       headers: {
         'User-Agent': WilmaHttpClient.userAgent(),
         'Content-Type': 'application/x-www-form-urlencoded'
       }
     });
-    
+
     return res.data;
   }
 

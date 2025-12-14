@@ -1,4 +1,5 @@
 import axios, { AxiosInstance } from 'axios';
+import { URL } from 'url';
 import { wrapper } from 'axios-cookiejar-support';
 import { CookieJar } from 'tough-cookie';
 
@@ -9,7 +10,7 @@ export class WilmaHttpClient {
   private client: AxiosInstance;
   private jar: CookieJar;
   private apiVersion: number | null = null;
-  private baseUrl: string | null = null;
+  private baseUrl: URL | null = null;
 
   constructor() {
     this.jar = new CookieJar();
@@ -44,14 +45,15 @@ export class WilmaHttpClient {
    * @param baseUrl The base URL of the Wilma server
    * @returns The API version number or null if detection fails
    */
-  async detectApiVersion(baseUrl: string): Promise<number | null> {
-    if (this.apiVersion !== null && this.baseUrl === baseUrl) {
+  async detectApiVersion(baseUrl: string | URL): Promise<number | null> {
+    const normalized = typeof baseUrl === 'string' ? new URL(baseUrl) : baseUrl;
+    if (this.apiVersion !== null && this.baseUrl && this.baseUrl.toString() === normalized.toString()) {
       return this.apiVersion;
     }
 
     try {
-      this.baseUrl = baseUrl;
-      const response = await this.client.get(`${baseUrl}/index_json`, {
+      this.baseUrl = normalized;
+      const response = await this.client.get(new URL('/index_json', this.baseUrl).toString(), {
         headers: { 'User-Agent': WilmaHttpClient.userAgent() }
       });
 

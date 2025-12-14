@@ -1,4 +1,5 @@
 import { AxiosInstance } from 'axios';
+import { URL } from 'url';
 import * as cheerio from 'cheerio';
 import { parse, startOfDay, isAfter, isEqual } from 'date-fns';
 import { fi } from 'date-fns/locale';
@@ -21,16 +22,16 @@ export interface ExamEntry {
  */
 export class ExamsClient {
   private client: AxiosInstance;
-  private baseUrl: string;
+  private baseUrl: URL;
 
-  constructor(client: AxiosInstance, baseUrl: string) {
+  constructor(client: AxiosInstance, baseUrl: string | URL) {
     this.client = client;
-    this.baseUrl = baseUrl;
+    this.baseUrl = typeof baseUrl === 'string' ? new URL(baseUrl) : baseUrl;
   }
 
   /** Fetch and parse exam calendar for a child */
   async fetchCalendar(childId: string): Promise<ExamEntry[]> {
-    const url = `${this.baseUrl}/!${childId}/exams/calendar?printable`;
+    const url = new URL(`!${childId}/exams/calendar?printable`, this.baseUrl).toString();
     const res = await this.client.get(url, {
       headers: { 'User-Agent': WilmaHttpClient.userAgent() }
     });

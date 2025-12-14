@@ -4,6 +4,7 @@
 
 import * as cheerio from 'cheerio';
 import { AxiosInstance } from 'axios';
+import { URL } from 'url';
 import { MessageDetailService, MessageDetail } from './messages_detail_helper.js';
 import { WilmaHttpClient } from './http.js';
 
@@ -19,13 +20,12 @@ export interface MessageListItem {
  */
 export class MessagesClient {
   private client: AxiosInstance;
-  private baseUrl: string;
+  private baseUrl: URL;
   private detailService: MessageDetailService;
-
-  constructor(client: AxiosInstance, baseUrl: string, detailService?: MessageDetailService) {
+  constructor(client: AxiosInstance, baseUrl: string | URL, detailService?: MessageDetailService) {
     this.client = client;
-    this.baseUrl = baseUrl;
-    this.detailService = detailService || new MessageDetailService(client, baseUrl);
+    this.baseUrl = typeof baseUrl === 'string' ? new URL(baseUrl) : baseUrl;
+    this.detailService = detailService || new MessageDetailService(client, this.baseUrl);
   }
 
   /** Fetch messages from Wilma JSON list endpoint with HTML fallback */
@@ -33,7 +33,7 @@ export class MessagesClient {
     childId: string,
     pruneDays: number = 7
   ): Promise<{ list: MessageListItem[]; details: MessageDetail[] }> {
-    const listApiUrl = `${this.baseUrl}/!${childId}/messages/list`;
+    const listApiUrl = new URL(`!${childId}/messages/list`, this.baseUrl).toString();
     try {
       const apiRes = await this.client.get(listApiUrl, { headers: { 'User-Agent': WilmaHttpClient.userAgent() } });
       if (apiRes && apiRes.data) {
@@ -89,7 +89,7 @@ export class MessagesClient {
       // fall back to HTML parsing
     }
 
-    const messagesUrl = `${this.baseUrl}/!${childId}/messages`;
+    const messagesUrl = new URL(`!${childId}/messages`, this.baseUrl).toString();
     const res = await this.client.get(messagesUrl, { headers: { 'User-Agent': WilmaHttpClient.userAgent() } });
     const body = typeof res.data === 'string' ? res.data : JSON.stringify(res.data);
 

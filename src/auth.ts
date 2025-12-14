@@ -1,5 +1,6 @@
 import { AxiosInstance, AxiosResponse } from 'axios';
 import { WilmaHttpClient, userAgent } from './http.js';
+import { URL } from 'url';
 import { ChildParser, ChildWithSchool } from './parser.js';
 import { ExamsClient } from './exams.js';
 import { MessagesClient } from './messages.js';
@@ -18,7 +19,7 @@ interface TokenResponse {
  * Configuration for Wilma authentication
  */
 export interface WilmaAuthConfig {
-  baseUrl: string;
+  baseUrl: string | URL;
   usernameField?: string;
   passwordField?: string;
   httpClient?: AxiosInstance; // Optional: provide your own HTTP client
@@ -34,7 +35,7 @@ export interface WilmaAuthConfig {
 export class WilmaAuthClient {
   private client: AxiosInstance;
   private httpClient: WilmaHttpClient | null = null;
-  private baseUrl: string;
+  private baseUrl: URL;
   private usernameField: string;
   private passwordField: string;
   private sessionValue: string | undefined;
@@ -53,7 +54,7 @@ export class WilmaAuthClient {
       this.httpClient = WilmaHttpClient.create();
       this.client = this.httpClient.getClient();
     }
-    this.baseUrl = config.baseUrl;
+    this.baseUrl = typeof config.baseUrl === 'string' ? new URL(config.baseUrl) : config.baseUrl;
     this.usernameField = config.usernameField || 'Login';
     this.passwordField = config.passwordField || 'Password';
   }
@@ -78,7 +79,7 @@ export class WilmaAuthClient {
     // Try new API format first (/index_json returns SessionID in response body)
     try {
       const indexJsonPath = '/index_json';
-      const res = await this.client.get(`${this.baseUrl}${indexJsonPath}`, {
+      const res = await this.client.get(new URL(indexJsonPath, this.baseUrl).toString(), {
         headers: { 'User-Agent': userAgent() }
       });
 
@@ -96,7 +97,7 @@ export class WilmaAuthClient {
     // Fall back to old API format (/token endpoint with set-cookie headers)
     try {
       const tokenPath = '/token';
-      const res = await this.client.get(`${this.baseUrl}${tokenPath}`, {
+      const res = await this.client.get(new URL(tokenPath, this.baseUrl).toString(), {
         headers: { 'User-Agent': userAgent() }
       });
 
@@ -165,7 +166,7 @@ export class WilmaAuthClient {
     // Explicitly set the session cookie in the Cookie header
     const cookieHeader = `enableAnalytics_56553=false; ${this.sessionCookieName}=${this.sessionValue}`;
 
-    const res = await this.client.post(`${this.baseUrl}${loginPath}`, formData, {
+    const res = await this.client.post(new URL(loginPath, this.baseUrl).toString(), formData, {
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
         'Cookie': cookieHeader,
@@ -199,7 +200,7 @@ export class WilmaAuthClient {
    * @throws Error if fetch fails
    */
   async getLandingPage(): Promise<string> {
-    const res = await this.client.get(this.baseUrl, {
+    const res = await this.client.get(this.baseUrl.toString(), {
       headers: {
         'User-Agent': userAgent()
       },

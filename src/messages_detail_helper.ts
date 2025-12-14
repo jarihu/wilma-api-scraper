@@ -4,6 +4,7 @@
 
 import * as cheerio from 'cheerio';
 import { AxiosInstance } from 'axios';
+import { URL } from 'url';
 import { WilmaHttpClient } from './http.js';
 
 export interface MessageDetail {
@@ -21,16 +22,16 @@ export interface MessageDetail {
  */
 export class MessageDetailService {
   private client: AxiosInstance;
-  private baseUrl: string;
+  private baseUrl: URL;
 
-  constructor(client: AxiosInstance, baseUrl: string) {
+  constructor(client: AxiosInstance, baseUrl: string | URL) {
     this.client = client;
-    this.baseUrl = baseUrl;
+    this.baseUrl = typeof baseUrl === 'string' ? new URL(baseUrl) : baseUrl;
   }
 
   /** Fetch and parse a single message detail page */
   async fetch(childId: string, messageId: string): Promise<MessageDetail> {
-    const url = `${this.baseUrl}/!${childId}/messages/${messageId}?printable`;
+    const url = new URL(`!${childId}/messages/${messageId}?printable`, this.baseUrl).toString();
     const res = await this.client.get(url, { headers: { 'User-Agent': WilmaHttpClient.userAgent() } });
 
     const text = typeof res.data === 'string' ? res.data : JSON.stringify(res.data);

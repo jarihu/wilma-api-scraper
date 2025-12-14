@@ -53,6 +53,12 @@
   "devDependencies": {
     "@types/node": "^24.10.1",
     "@types/tough-cookie": "^4.0.5",
+    "@typescript-eslint/eslint-plugin": "^8.49.0",
+    "@typescript-eslint/parser": "^8.49.0",
+    "eslint": "^9.39.2",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^7.2.1",
     "typescript": "^5.9.3",
     "vitest": "^4.0.15"
   }
