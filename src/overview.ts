@@ -20,6 +20,9 @@ export interface HomeworkEntry {
   rowNumber: number;
   date: string;
   homework: string;
+  subject: string;
+  subjectCode: string;
+  teacher: Teacher;
 }
 
 /**
@@ -37,12 +40,48 @@ export interface DiaryEntry {
  * Overview exam entry from JSON
  */
 export interface OverviewExam {
+  examId: number;
   date: string;
   dateIso: string;
   subject: string;
+  subjectCode: string;
   teachers: string[];
   summary: string;
   description: string | null;
+  name: string;
+  topic: string | null;
+  grade: string | null;
+}
+
+/**
+ * Upcoming (ungraded, future) exam — flat list derived from Groups[].Exams[]
+ */
+export interface UpcomingExam {
+  examId: number;
+  date: string;
+  dateIso: string;
+  name: string;
+  subject: string;
+  subjectCode: string;
+  topic: string | null;
+  teacher: string;
+  teacherCode: string;
+}
+
+/**
+ * Graded exam from top-level Exams[] array
+ */
+export interface GradeEntry {
+  examId: number;
+  date: string;
+  dateIso: string;
+  name: string;
+  subject: string;
+  subjectCode: string;
+  grade: string;
+  info: string | null;
+  teacher: string;
+  teacherCode: string;
 }
 
 /**
@@ -89,6 +128,12 @@ export interface Overview {
   role: string;
   schedule: ScheduleEntry[];
   groups: OverviewGroup[];
+  /** Flat list of future, ungraded exams across all groups */
+  upcomingExams: UpcomingExam[];
+  /** Graded exams from top-level Exams[] */
+  grades: GradeEntry[];
+  /** All homework entries across all groups, newest first */
+  homework: HomeworkEntry[];
 }
 
 /**
@@ -98,6 +143,121 @@ export class OverviewParser {
   /** Parse overview JSON response from Wilma */
   static parseOverviewJson(responseData: unknown, _childId: string): Overview {
     const raw = responseData as any;
+    const today = new Date().toISOString().slice(0, 10);
+
+    const groups: OverviewGroup[] = Array.isArray(raw.Groups)
+      ? raw.Groups.map((group: any) => {
+          const firstTeacher: Teacher = Array.isArray(group.Teachers) && group.Teachers.length > 0
+            ? { id: group.Teachers[0].TeacherId, name: group.Teachers[0].TeacherName || '', code: group.Teachers[0].TeacherCode || '' }
+            : { name: '', code: '' };
+          return {
+            id: group.Id || 0,
+            courseId: group.CourseId || 0,
+            name: group.Name || '',
+            caption: group.Caption || '',
+            courseName: group.CourseName || '',
+            courseCode: group.CourseCode || '',
+            startDate: group.StartDate || '',
+            endDate: group.EndDate || '',
+            teachers: Array.isArray(group.Teachers)
+              ? group.Teachers.map((t: any) => ({
+                  id: t.TeacherId,
+                  name: t.TeacherName || '',
+                  code: t.TeacherCode || ''
+                }))
+              : [],
+            homework: Array.isArray(group.Homework)
+              ? group.Homework.map((h: any) => ({
+                  rowNumber: h.RowNumber || 0,
+                  date: h.Date || '',
+                  homework: (h.Homework || '').replace(/\r\n/g, '\n').trim(),
+                  subject: group.CourseName || '',
+                  subjectCode: group.CourseCode || '',
+                  teacher: firstTeacher
+                }))
+              : [],
+            diary: Array.isArray(group.Diary)
+              ? group.Diary.map((d: any) => ({
+                  rowNumber: d.RowNumber || 0,
+                  date: d.Date || '',
+                  lesson: d.Lesson || '',
+                  note: d.Note || '',
+                  teacher: {
+                    id: d.TeacherId,
+                    name: d.TeacherName || '',
+                    code: d.TeacherCode || ''
+                  }
+                }))
+              : [],
+            exams: Array.isArray(group.Exams)
+              ? group.Exams.map((e: any) => ({
+                  examId: e.Id || 0,
+                  date: e.Date || '',
+                  dateIso: OverviewParser.convertFinnishDateToISO(e.Date),
+                  subject: group.CourseName || e.Name || e.Course || '',
+                  subjectCode: group.CourseCode || '',
+                  teachers: Array.isArray(e.Teachers)
+                    ? e.Teachers.map((t: any) => t.TeacherCode || t.TeacherName || '')
+                    : [],
+                  summary: e.Caption || e.Name || e.Course || '',
+                  description: e.Info || null,
+                  name: e.Caption || e.Name || '',
+                  topic: e.Topic?.trim() || null,
+                  grade: e.Grade !== null && String(e.Grade).trim() !== '' ? String(e.Grade).trim() : null
+                }))
+              : []
+          };
+        })
+      : [];
+
+    const upcomingExams: UpcomingExam[] = [];
+    for (const group of groups) {
+      const firstTeacher = group.teachers[0] ?? { name: '', code: '' };
+      for (const exam of group.exams) {
+        if (exam.grade !== null) continue;
+        const dateStr = exam.dateIso ? exam.dateIso.slice(0, 10) : '';
+        if (dateStr && dateStr < today) continue;
+        upcomingExams.push({
+          examId: exam.examId,
+          date: exam.date,
+          dateIso: exam.dateIso,
+          name: exam.name,
+          subject: exam.subject,
+          subjectCode: exam.subjectCode,
+          topic: exam.topic,
+          teacher: firstTeacher.name,
+          teacherCode: firstTeacher.code
+        });
+      }
+    }
+    upcomingExams.sort((a, b) => a.dateIso.localeCompare(b.dateIso));
+
+    const grades: GradeEntry[] = Array.isArray(raw.Exams)
+      ? raw.Exams.flatMap((e: any) => {
+          const grade = String(e.Grade ?? '').trim();
+          if (!grade) return [];
+          const dateIso = OverviewParser.convertFinnishDateToISO(e.Date || '');
+          const teacher = e.Teachers?.[0];
+          return [{
+            examId: e.ExamId || e.Id || 0,
+            date: e.Date || '',
+            dateIso,
+            name: e.Name || '',
+            subject: e.CourseTitle || '',
+            subjectCode: (e.Course || '').split(' ')[0],
+            grade,
+            info: e.Info?.trim() || null,
+            teacher: teacher?.TeacherName || '',
+            teacherCode: teacher?.TeacherCode || ''
+          }];
+        })
+      : [];
+    grades.sort((a, b) => b.dateIso.localeCompare(a.dateIso));
+
+    const homework: HomeworkEntry[] = groups
+      .flatMap(g => g.homework)
+      .filter(h => h.homework.length > 0);
+    homework.sort((a, b) => b.date.localeCompare(a.date));
 
     return {
       role: raw.Role || 'unknown',
@@ -126,57 +286,10 @@ export class OverviewParser {
               : []
           }))
         : [],
-      groups: Array.isArray(raw.Groups)
-        ? raw.Groups.map((group: any) => ({
-            id: group.Id || 0,
-            courseId: group.CourseId || 0,
-            name: group.Name || '',
-            caption: group.Caption || '',
-            courseName: group.CourseName || '',
-            courseCode: group.CourseCode || '',
-            startDate: group.StartDate || '',
-            endDate: group.EndDate || '',
-            teachers: Array.isArray(group.Teachers)
-              ? group.Teachers.map((t: any) => ({
-                  id: t.TeacherId,
-                  name: t.TeacherName || '',
-                  code: t.TeacherCode || ''
-                }))
-              : [],
-            homework: Array.isArray(group.Homework)
-              ? group.Homework.map((h: any) => ({
-                  rowNumber: h.RowNumber || 0,
-                  date: h.Date || '',
-                  homework: h.Homework || ''
-                }))
-              : [],
-            diary: Array.isArray(group.Diary)
-              ? group.Diary.map((d: any) => ({
-                  rowNumber: d.RowNumber || 0,
-                  date: d.Date || '',
-                  lesson: d.Lesson || '',
-                  note: d.Note || '',
-                  teacher: {
-                    id: d.TeacherId,
-                    name: d.TeacherName || '',
-                    code: d.TeacherCode || ''
-                  }
-                }))
-              : [],
-            exams: Array.isArray(group.Exams)
-              ? group.Exams.map((e: any) => ({
-                  date: e.Date || '',
-                  dateIso: OverviewParser.convertFinnishDateToISO(e.Date),
-                  subject: e.Name || e.Course || '',
-                  teachers: Array.isArray(e.Teachers)
-                    ? e.Teachers.map((t: any) => t.TeacherCode || t.TeacherName || '')
-                    : [],
-                  summary: e.Name || e.Course || '',
-                  description: e.Info || null
-                }))
-              : []
-          }))
-        : []
+      groups,
+      upcomingExams,
+      grades,
+      homework
     };
   }
 

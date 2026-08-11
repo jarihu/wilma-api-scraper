@@ -1,4 +1,4 @@
-import { parse, startOfDay, subDays, isBefore, isAfter, isEqual } from 'date-fns';
+import { parse, startOfDay, subDays, isBefore, isAfter } from 'date-fns';
 import { fi } from 'date-fns/locale';
 
 export interface HomeworkEntry {
@@ -9,21 +9,24 @@ export interface HomeworkEntry {
   date: string;
   dateIso: string;
   homework: string;
+  subjectCode: string;
+  teacher: string;
+  teacherCode: string;
 }
 
 export class HomeworkExtractor {
   /**
    * Extracts homework from Wilma overview JSON response.
-   * Processes all groups, extracts the latest homework item per group,
+   * Processes all groups, extracts all homework entries per group,
    * filters to entries from the last 7 days, and returns normalized results.
    *
    * @param responseData - Wilma overview API response data
-   * @returns Array of HomeworkEntry objects for homework within 7 days
+   * @param daysBack - How many days back to include (default 7)
+   * @returns Array of HomeworkEntry objects sorted newest first
    */
-  static extractHomework(responseData: unknown): HomeworkEntry[] {
+  static extractHomework(responseData: unknown, daysBack: number = 7): HomeworkEntry[] {
     const result: HomeworkEntry[] = [];
 
-    // Type guard: ensure responseData is an object with Groups array
     if (
       typeof responseData !== 'object' ||
       responseData === null ||
@@ -37,13 +40,10 @@ export class HomeworkExtractor {
       return result;
     }
 
-    // Calculate date range: today and last 7 days
     const today = startOfDay(new Date());
-    const sevenDaysAgo = startOfDay(subDays(today, 7));
+    const cutoffDate = startOfDay(subDays(today, daysBack));
 
-    // Process each group
     for (const group of data.Groups) {
-      // Type guard: ensure group is an object
       if (typeof group !== 'object' || group === null) {
         continue;
       }
@@ -53,10 +53,10 @@ export class HomeworkExtractor {
         CourseName?: unknown;
         CourseCode?: unknown;
         Name?: unknown;
+        Teachers?: unknown[];
         Homework?: unknown[];
       };
 
-      // Validate required group fields
       if (
         typeof g.CourseId !== 'number' ||
         typeof g.CourseName !== 'string' ||
@@ -66,60 +66,60 @@ export class HomeworkExtractor {
         continue;
       }
 
-      // Skip if no homework array or empty
       if (!Array.isArray(g.Homework) || g.Homework.length === 0) {
         continue;
       }
 
-      // Get the first (most recent) homework item
-      const latestHw = g.Homework[0];
-      if (typeof latestHw !== 'object' || latestHw === null) {
-        continue;
+      const firstTeacher = Array.isArray(g.Teachers) && g.Teachers.length > 0
+        ? g.Teachers[0] as { TeacherName?: string; TeacherCode?: string }
+        : null;
+      const teacher = firstTeacher?.TeacherName ?? '';
+      const teacherCode = firstTeacher?.TeacherCode ?? '';
+
+      for (const item of g.Homework) {
+        if (typeof item !== 'object' || item === null) {
+          continue;
+        }
+
+        const hw = item as { Date?: unknown; Homework?: unknown };
+
+        if (typeof hw.Date !== 'string' || typeof hw.Homework !== 'string') {
+          continue;
+        }
+
+        const text = hw.Homework.replace(/\r\n/g, '\n').trim();
+        if (!text) continue;
+
+        const hwDate = this.parseDate(hw.Date);
+        if (!hwDate) {
+          continue;
+        }
+
+        const hwDateStartOfDay = startOfDay(hwDate);
+
+        if (
+          isBefore(hwDateStartOfDay, cutoffDate) ||
+          isAfter(hwDateStartOfDay, today)
+        ) {
+          continue;
+        }
+
+        result.push({
+          courseId: g.CourseId,
+          courseName: g.CourseName,
+          courseCode: g.CourseCode,
+          groupName: g.Name,
+          date: hw.Date,
+          dateIso: hwDateStartOfDay.toISOString(),
+          homework: text,
+          subjectCode: g.CourseCode,
+          teacher,
+          teacherCode,
+        });
       }
-
-      const hw = latestHw as {
-        Date?: unknown;
-        Homework?: unknown;
-      };
-
-      // Validate homework has required fields
-      if (
-        typeof hw.Date !== 'string' ||
-        typeof hw.Homework !== 'string'
-      ) {
-        continue;
-      }
-
-      // Parse the homework date (supports multiple formats)
-      const hwDate = this.parseDate(hw.Date);
-      if (!hwDate) {
-        continue;
-      }
-
-      const hwDateStartOfDay = startOfDay(hwDate);
-
-      // Filter: only include homework from last 7 days (inclusive)
-      if (
-        isBefore(hwDateStartOfDay, sevenDaysAgo) ||
-        isAfter(hwDateStartOfDay, today)
-      ) {
-        continue;
-      }
-
-      // Create homework entry
-      const entry: HomeworkEntry = {
-        courseId: g.CourseId,
-        courseName: g.CourseName,
-        courseCode: g.CourseCode,
-        groupName: g.Name,
-        date: hw.Date,
-        dateIso: hwDateStartOfDay.toISOString(),
-        homework: hw.Homework,
-      };
-
-      result.push(entry);
     }
 
+    result.sort((a, b) => b.date.localeCompare(a.date));
     return result;
   }
 

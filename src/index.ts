@@ -42,7 +42,9 @@ export type {
   ScheduleEntry,
   HomeworkEntry as OverviewHomeworkEntry,
   DiaryEntry,
-  Teacher
+  Teacher,
+  UpcomingExam,
+  GradeEntry
 } from './overview.js';
 
 // Messages
