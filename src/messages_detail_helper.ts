@@ -6,6 +6,7 @@ import * as cheerio from 'cheerio';
 import { AxiosInstance } from 'axios';
 import { URL } from 'url';
 import { WilmaHttpClient, formatError } from './http.js';
+import { logger } from './logger.js';
 
 export interface MessageDetail {
   id: string;
@@ -62,7 +63,7 @@ export class MessageDetailService {
               date = val;
             }
           } catch (err) {
-            console.warn('[Wilma] Failed to parse message detail row:', formatError(err));
+            logger.warn('Failed to parse message detail row:', formatError(err));
           }
         });
       }
@@ -74,7 +75,7 @@ export class MessageDetailService {
         $('div#message').first().html() ||
         null;
       if (bodySel) {
-        bodyText = (cheerio.load(bodySel) as any).text().trim() || null;
+        bodyText = cheerio.load(bodySel).text().trim() || null;
       } else if (tbl && tbl.length) {
         let collected = '';
         const between = tbl.nextUntil && tbl.nextUntil('.printout-footer');
@@ -95,7 +96,7 @@ export class MessageDetailService {
       const hasAttachments = !!$('a[href*="attachment"], a.attachment').length;
       return { id: messageId, subject, from, date, body: bodyText, has_attachments: hasAttachments };
     } catch (err) {
-      console.warn('[Wilma] Failed to parse message detail HTML, returning raw:', formatError(err));
+      logger.warn('Failed to parse message detail HTML, returning raw:', formatError(err));
       return { id: messageId, raw: text.slice(0, 2000) };
     }
   }

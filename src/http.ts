@@ -2,6 +2,7 @@ import axios, { AxiosInstance } from 'axios';
 import { URL } from 'url';
 import { wrapper } from 'axios-cookiejar-support';
 import { CookieJar } from 'tough-cookie';
+import { logger } from './logger.js';
 
 /**
  * HTTP client wrapper with cookie jar support for Wilma
@@ -21,20 +22,21 @@ export class WilmaHttpClient {
     });
 
     wrapper(this.client);
-    (this.client as any).defaults.jar = this.jar;
-    (this.client as any).defaults.withCredentials = true;
+    const defaults = this.client.defaults as typeof this.client.defaults & { jar?: CookieJar; withCredentials?: boolean };
+    defaults.jar = this.jar;
+    defaults.withCredentials = true;
 
     // Centralized response logging: warn on all non-2xx responses
     this.client.interceptors.response.use(
       (response) => {
         if (response.status < 200 || response.status >= 300) {
           const method = response.config.method?.toUpperCase() || '?';
-          console.warn(`[Wilma] HTTP ${response.status} on ${method} ${response.config.url}`);
+          logger.warn(`HTTP ${response.status} on ${method} ${response.config.url}`);
         }
         return response;
       },
       (error) => {
-        console.warn('[Wilma] HTTP request failed:', formatError(error));
+        logger.warn('HTTP request failed:', formatError(error));
         return Promise.reject(error);
       }
     );
@@ -74,11 +76,11 @@ export class WilmaHttpClient {
 
       if (response.data?.ApiVersion) {
         this.apiVersion = response.data.ApiVersion;
-        console.log(`[Wilma] API Version detected: ${this.apiVersion}`);
+        logger.log(`API Version detected: ${this.apiVersion}`);
         return this.apiVersion;
       }
     } catch (error) {
-      console.warn('[Wilma] Failed to detect API version:', error instanceof Error ? error.message : String(error));
+      logger.warn('Failed to detect API version:', error instanceof Error ? error.message : String(error));
     }
 
     return null;
@@ -95,11 +97,11 @@ export class WilmaHttpClient {
    * Log information about the Wilma client configuration
    */
   logInfo(): void {
-    console.log('[Wilma] Client Configuration:');
-    console.log(`  - Base URL: ${this.baseUrl || 'not set'}`);
-    console.log(`  - API Version: ${this.apiVersion ?? 'not detected'}`);
-    console.log(`  - User-Agent: ${WilmaHttpClient.userAgent()}`);
-    console.log(`  - Cookie Jar: ${this.jar ? 'enabled' : 'disabled'}`);
+    logger.log('Client Configuration:');
+    logger.log(`  - Base URL: ${this.baseUrl || 'not set'}`);
+    logger.log(`  - API Version: ${this.apiVersion ?? 'not detected'}`);
+    logger.log(`  - User-Agent: ${WilmaHttpClient.userAgent()}`);
+    logger.log(`  - Cookie Jar: ${this.jar ? 'enabled' : 'disabled'}`);
   }
 
   /** Generate a consistent User-Agent string */

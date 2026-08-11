@@ -13,7 +13,7 @@ const tsRecommendedType = {};
 
 module.exports = [
 	{
-		files: ['**/*.ts', '**/*.js'],
+		files: ['src/**/*.ts'],
 		languageOptions: {
 			ecmaVersion: 2020,
 			sourceType: 'module',
@@ -54,6 +54,27 @@ module.exports = [
 		},
 		linterOptions: {
 			reportUnusedDisableDirectives: true
+		}
+	},
+	{
+		files: ['test/**/*.ts'],
+		languageOptions: {
+			ecmaVersion: 2020,
+			sourceType: 'module',
+			parser: require('@typescript-eslint/parser'),
+			parserOptions: {
+				project: null
+			}
+		},
+		plugins: {
+			'@typescript-eslint': tsPlugin,
+		},
+		rules: {
+			'no-console': 'off',
+			'@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
+			'no-var': 'error',
+			'prefer-const': 'error',
+			'eqeqeq': ['error', 'always']
 		}
 	}
 ];

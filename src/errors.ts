@@ -210,3 +210,10 @@ export function isWilmaSessionError(error: unknown): error is WilmaSessionError 
 export function isWilmaValidationError(error: unknown): error is WilmaValidationError {
   return error instanceof WilmaValidationError;
 }
+
+/**
+ * Type guard to check if error is a WilmaApiVersionError
+ */
+export function isWilmaApiVersionError(error: unknown): error is WilmaApiVersionError {
+  return error instanceof WilmaApiVersionError;
+}

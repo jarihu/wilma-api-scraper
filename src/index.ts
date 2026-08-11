@@ -16,7 +16,8 @@ export {
   isWilmaNetworkError,
   isWilmaParseError,
   isWilmaSessionError,
-  isWilmaValidationError
+  isWilmaValidationError,
+  isWilmaApiVersionError
 } from './errors.js';
 
 // HTTP utilities
@@ -59,3 +60,6 @@ export type { HomeworkEntry } from './homework.js';
 
 // Re-export types from axios
 export type { AxiosInstance, AxiosResponse } from 'axios';
+
+// Logger
+export { logger, setLogLevel } from './logger.js';

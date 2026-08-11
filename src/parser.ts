@@ -1,4 +1,5 @@
 import * as cheerio from 'cheerio';
+import { logger } from './logger.js';
 
 /**
  * Child entry from landing page
@@ -59,7 +60,7 @@ export class ChildParser {
           clone.find('span.lem').remove();
           name = clone.text().trim() || null;
         } catch (err) {
-          console.warn('[Wilma] Failed to extract child name from HTML element:', err instanceof Error ? err.message : String(err));
+          logger.warn('Failed to extract child name from HTML element:', err instanceof Error ? err.message : String(err));
           name = null;
         }
 

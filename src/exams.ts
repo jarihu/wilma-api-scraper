@@ -1,5 +1,7 @@
 import { AxiosInstance } from 'axios';
 import { URL } from 'url';
+import type { AnyNode } from 'domhandler';
+import type { CheerioAPI, Cheerio } from 'cheerio';
 import * as cheerio from 'cheerio';
 import { parse, startOfDay, isAfter, isEqual } from 'date-fns';
 import { fi } from 'date-fns/locale';
@@ -65,11 +67,11 @@ export class ExamsClient {
     return ExamsClient._parseLegacyHtml($, fetchedAt);
   }
 
-  private static _parseModernHtml($: cheerio.CheerioAPI, blocks: cheerio.Cheerio<any>, fetchedAt: Date): ExamEntry[] {
+  private static _parseModernHtml($: CheerioAPI, blocks: Cheerio<AnyNode>, fetchedAt: Date): ExamEntry[] {
     const exams: ExamEntry[] = [];
     let autoId = 1;
 
-    blocks.each((_: number, block: any) => {
+    blocks.each((_: number, block: AnyNode) => {
       const table = $(block).find('table.table-grey').first();
       if (!table.length) return;
 
@@ -99,7 +101,7 @@ export class ExamsClient {
       const teachers: string[] = [];
       let notes: string | null = null;
 
-      rows.slice(1).each((_: number, row: any) => {
+      rows.slice(1).each((_: number, row: AnyNode) => {
         const th = $(row).find('th').first();
         const td = $(row).find('td').first();
         if (!th.length || !td.length) return;
@@ -109,7 +111,7 @@ export class ExamsClient {
 
         if (header.includes('opettaja') || header.includes('teacher')) {
           const names = td.find('a.profile-link').toArray()
-            .map((a: any) => $(a).text().trim())
+            .map((a: AnyNode) => $(a).text().trim())
             .filter(Boolean);
           teacher = names.length ? names.join(', ') : value;
           teachers.push(...(names.length ? names : value.split(',').map((s: string) => s.trim()).filter(Boolean)));
@@ -135,14 +137,14 @@ export class ExamsClient {
     return exams;
   }
 
-  private static _parseLegacyHtml($: cheerio.CheerioAPI, fetchedAt: Date): ExamEntry[] {
+  private static _parseLegacyHtml($: CheerioAPI, fetchedAt: Date): ExamEntry[] {
     const exams: ExamEntry[] = [];
     let autoId = 1;
     let currentDate: string | null = null;
     let currentTeachers: string[] = [];
     let currentSummary: string | null = null;
 
-    $('table.proptable tr').each((_index: number, row: any) => {
+    $('table.proptable tr').each((_index: number, row: AnyNode) => {
       const $row = $(row);
       const firstCol = $row.find('th, td').eq(0);
       const secondCol = $row.find('th, td').eq(1);

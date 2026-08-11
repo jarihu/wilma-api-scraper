@@ -41,7 +41,7 @@
     "build": "tsc",
     "test": "vitest",
     "test:watch": "vitest",
-    "lint": "eslint src --ext .ts"
+    "lint": "eslint src test --ext .ts"
   },
   "dependencies": {
     "axios": "^1.13.2",

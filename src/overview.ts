@@ -4,6 +4,7 @@ import { AxiosInstance } from 'axios';
 import { URL } from 'url';
 import { WilmaHttpClient, formatError } from './http.js';
 import { WilmaParseError } from './errors.js';
+import { logger } from './logger.js';
 
 /**
  * Teacher information
@@ -137,17 +138,114 @@ export interface Overview {
   homework: HomeworkEntry[];
 }
 
+// Raw JSON types from Wilma overview API (keys match server response)
+interface RawTeacher {
+  TeacherId?: number;
+  TeacherName?: string;
+  TeacherCode?: string;
+}
+
+interface RawHomework {
+  RowNumber?: number;
+  Date?: string;
+  Homework?: string;
+}
+
+interface RawDiary {
+  RowNumber?: number;
+  Date?: string;
+  Lesson?: string;
+  Note?: string;
+  TeacherId?: number;
+  TeacherName?: string;
+  TeacherCode?: string;
+}
+
+interface RawExam {
+  Id?: number;
+  Date?: string;
+  Caption?: string;
+  Name?: string;
+  Course?: string;
+  Info?: string | null;
+  Topic?: string | null;
+  Grade?: string | number | null;
+  Teachers?: Array<{
+    TeacherId?: number;
+    TeacherName?: string;
+    TeacherCode?: string;
+  }>;
+}
+
+interface RawGroup {
+  Id?: number;
+  CourseId?: number;
+  Name?: string;
+  Caption?: string;
+  CourseName?: string;
+  CourseCode?: string;
+  StartDate?: string;
+  EndDate?: string;
+  Teachers?: RawTeacher[];
+  Homework?: RawHomework[];
+  Diary?: RawDiary[];
+  Exams?: RawExam[];
+}
+
+interface RawGradeEntry {
+  ExamId?: number;
+  Id?: number;
+  Date?: string;
+  Name?: string;
+  CourseTitle?: string;
+  Course?: string;
+  Grade?: string;
+  Info?: string | null;
+  Teachers?: RawTeacher[];
+}
+
+interface RawScheduleTeacher {
+  Id?: number;
+  LongCaption?: string;
+  Caption?: string;
+}
+
+interface RawScheduleGroup {
+  Id?: number;
+  ShortCaption?: string;
+  Caption?: string;
+  FullCaption?: string;
+  Teachers?: RawScheduleTeacher[];
+}
+
+interface RawScheduleEntry {
+  ScheduleID?: number;
+  Day?: number;
+  Start?: string;
+  End?: string;
+  Class?: string;
+  DateArray?: string[];
+  Groups?: RawScheduleGroup[];
+}
+
+interface RawOverviewResponse {
+  Role?: string;
+  Groups?: RawGroup[];
+  Exams?: RawGradeEntry[];
+  Schedule?: RawScheduleEntry[];
+}
+
 /**
  * Parser for overview responses
  */
 export class OverviewParser {
   /** Parse overview JSON response from Wilma */
   static parseOverviewJson(responseData: unknown, _childId: string): Overview {
-    const raw = responseData as any;
+    const raw = responseData as RawOverviewResponse;
     const today = new Date().toISOString().slice(0, 10);
 
     const groups: OverviewGroup[] = Array.isArray(raw.Groups)
-      ? raw.Groups.map((group: any) => {
+      ? raw.Groups.map((group: RawGroup) => {
           const firstTeacher: Teacher = Array.isArray(group.Teachers) && group.Teachers.length > 0
             ? { id: group.Teachers[0].TeacherId, name: group.Teachers[0].TeacherName || '', code: group.Teachers[0].TeacherCode || '' }
             : { name: '', code: '' };
@@ -161,14 +259,14 @@ export class OverviewParser {
             startDate: group.StartDate || '',
             endDate: group.EndDate || '',
             teachers: Array.isArray(group.Teachers)
-              ? group.Teachers.map((t: any) => ({
+              ? group.Teachers.map((t: RawTeacher) => ({
                   id: t.TeacherId,
                   name: t.TeacherName || '',
                   code: t.TeacherCode || ''
                 }))
               : [],
             homework: Array.isArray(group.Homework)
-              ? group.Homework.map((h: any) => ({
+              ? group.Homework.map((h: RawHomework) => ({
                   rowNumber: h.RowNumber || 0,
                   date: h.Date || '',
                   homework: (h.Homework || '').replace(/\r\n/g, '\n').trim(),
@@ -178,7 +276,7 @@ export class OverviewParser {
                 }))
               : [],
             diary: Array.isArray(group.Diary)
-              ? group.Diary.map((d: any) => ({
+              ? group.Diary.map((d: RawDiary) => ({
                   rowNumber: d.RowNumber || 0,
                   date: d.Date || '',
                   lesson: d.Lesson || '',
@@ -191,14 +289,14 @@ export class OverviewParser {
                 }))
               : [],
             exams: Array.isArray(group.Exams)
-              ? group.Exams.map((e: any) => ({
+              ? group.Exams.map((e: RawExam) => ({
                   examId: e.Id || 0,
                   date: e.Date || '',
-                  dateIso: OverviewParser.convertFinnishDateToISO(e.Date),
+                  dateIso: OverviewParser.convertFinnishDateToISO(e.Date || ''),
                   subject: group.CourseName || e.Name || e.Course || '',
                   subjectCode: group.CourseCode || '',
                   teachers: Array.isArray(e.Teachers)
-                    ? e.Teachers.map((t: any) => t.TeacherCode || t.TeacherName || '')
+                    ? e.Teachers.map((t) => t.TeacherCode || t.TeacherName || '')
                     : [],
                   summary: e.Caption || e.Name || e.Course || '',
                   description: e.Info || null,
@@ -234,7 +332,7 @@ export class OverviewParser {
     upcomingExams.sort((a, b) => a.dateIso.localeCompare(b.dateIso));
 
     const grades: GradeEntry[] = Array.isArray(raw.Exams)
-      ? raw.Exams.flatMap((e: any) => {
+      ? raw.Exams.flatMap((e: RawGradeEntry) => {
           const grade = String(e.Grade ?? '').trim();
           if (!grade) return [];
           const dateIso = OverviewParser.convertFinnishDateToISO(e.Date || '');
@@ -263,7 +361,7 @@ export class OverviewParser {
     return {
       role: raw.Role || 'unknown',
       schedule: Array.isArray(raw.Schedule)
-        ? raw.Schedule.map((entry: any) => ({
+        ? raw.Schedule.map((entry: RawScheduleEntry) => ({
             scheduleId: entry.ScheduleID || 0,
             day: entry.Day || 0,
             start: entry.Start || '',
@@ -271,13 +369,13 @@ export class OverviewParser {
             class: entry.Class || '',
             dateArray: Array.isArray(entry.DateArray) ? entry.DateArray : [],
             groups: Array.isArray(entry.Groups)
-              ? entry.Groups.map((g: any) => ({
+              ? entry.Groups.map((g: RawScheduleGroup) => ({
                   id: g.Id || 0,
                   shortCaption: g.ShortCaption || '',
                   caption: g.Caption || '',
                   fullCaption: g.FullCaption || '',
                   teachers: Array.isArray(g.Teachers)
-                    ? g.Teachers.map((t: any) => ({
+                    ? g.Teachers.map((t: RawScheduleTeacher) => ({
                         id: t.Id,
                         name: t.LongCaption || t.Caption || '',
                         code: t.Caption || ''
@@ -342,7 +440,7 @@ export class OverviewClient {
         return OverviewParser.parseOverviewJson(apiRes.data, childId);
       }
     } catch (err) {
-      console.warn('[Wilma] Failed to fetch overview via JSON API, falling back to HTML:', formatError(err));
+      logger.warn('Failed to fetch overview via JSON API, falling back to HTML:', formatError(err));
     }
 
     const url = new URL(`!${childId}/overview`, this.baseUrl).toString();
@@ -395,7 +493,7 @@ export class OverviewClient {
         return apiRes.data;
       }
     } catch (err) {
-      console.warn('[Wilma] Failed to fetch raw overview via JSON API, falling back to HTML:', formatError(err));
+      logger.warn('Failed to fetch raw overview via JSON API, falling back to HTML:', formatError(err));
     }
 
     const url = new URL(`!${childId}/overview`, this.baseUrl).toString();
@@ -439,7 +537,7 @@ export class OverviewClient {
    * @param childId - The child ID
    * @returns The extracted formkey or null if not found
    */
-  private extractFormKey(html: any, childId: string): string | null {
+  private extractFormKey(html: unknown, _childId: string): string | null {
     // Convert to string if it's an object
     const htmlString = typeof html === 'string' ? html : JSON.stringify(html);
     

@@ -1,5 +1,7 @@
 import { AxiosInstance, AxiosResponse } from 'axios';
 import { WilmaHttpClient, userAgent, formatError } from './http.js';
+import { logger } from './logger.js';
+import { withRetry } from './retry.js';
 import { URL } from 'url';
 import { WilmaAuthError } from './errors.js';
 import { ChildParser, ChildWithSchool } from './parser.js';
@@ -71,8 +73,13 @@ export class WilmaAuthClient {
   /**
    * Fetch authentication token and session from Wilma server
    * Supports both old (/token endpoint) and new (/index_json endpoint) API formats
+   * Automatically retries transient failures (up to 3 attempts with exponential backoff)
    */
   private async fetchToken(): Promise<TokenResponse> {
+    return withRetry(() => this._doFetchToken());
+  }
+
+  private async _doFetchToken(): Promise<TokenResponse> {
     let sessionValue: string | undefined;
     let sessionCookieName: string = 'Wilma2LoginID';
     let tokenValue: string = '';
@@ -92,7 +99,7 @@ export class WilmaAuthClient {
         return { token: tokenValue, sessionValue, sessionCookieName };
       }
     } catch (err) {
-      console.warn('[Wilma] Failed to fetch token via /index_json, trying legacy endpoint:', formatError(err));
+      logger.warn('Failed to fetch token via /index_json, trying legacy endpoint:', formatError(err));
     }
 
     // Fall back to old API format (/token endpoint with set-cookie headers)
@@ -129,7 +136,7 @@ export class WilmaAuthClient {
 
       tokenValue = res.data?.Wilma2LoginID || res.data?.token || '';
     } catch (err) {
-      console.warn('[Wilma] Failed to fetch token via /token:', formatError(err));
+      logger.warn('Failed to fetch token via /token:', formatError(err));
       throw new WilmaAuthError('Failed to fetch token from Wilma server (neither /index_json nor /token endpoints available)');
     }
 
@@ -143,10 +150,15 @@ export class WilmaAuthClient {
   /**
    * Perform login with username and password
    * After successful login, automatically parses and stores child information (name, school, class)
+   * Automatically retries transient failures (up to 3 attempts with exponential backoff)
    * @returns HTML content of the landing page after login
    * @throws Error if login fails
    */
   async login(username: string, password: string): Promise<string> {
+    return withRetry(() => this._doLogin(username, password));
+  }
+
+  private async _doLogin(username: string, password: string): Promise<string> {
     // Get session token first
     const tokenResponse = await this.fetchToken();
 
@@ -165,7 +177,7 @@ export class WilmaAuthClient {
     formData.append('SESSIONID', this.sessionValue);
 
     // Explicitly set the session cookie in the Cookie header
-    const cookieHeader = `enableAnalytics_56553=false; ${this.sessionCookieName}=${this.sessionValue}`;
+    const cookieHeader = `${this.sessionCookieName}=${this.sessionValue}`;
 
     const res = await this.client.post(new URL(loginPath, this.baseUrl).toString(), formData, {
       headers: {
@@ -225,7 +237,7 @@ export class WilmaAuthClient {
       this.children = ChildParser.extractChildren(html);
     } catch (err) {
       // If parsing fails, log but don't throw - allow client to continue
-      console.warn('Failed to parse child information from landing page:', err);
+      logger.warn('Failed to parse child information from landing page:', err);
     }
   }
 
@@ -234,7 +246,7 @@ export class WilmaAuthClient {
    */
   async logout(): Promise<AxiosResponse<unknown>> {
     const logoutPath = '/logout';
-    const res = await this.client.get(`${this.baseUrl}${logoutPath}`, {
+    const res = await this.client.get(new URL(logoutPath, this.baseUrl).toString(), {
       headers: {
         'User-Agent': userAgent()
       },

@@ -24,7 +24,11 @@ export class HomeworkExtractor {
    * @param daysBack - How many days back to include (default 7)
    * @returns Array of HomeworkEntry objects sorted newest first
    */
-  static extractHomework(responseData: unknown, daysBack: number = 7): HomeworkEntry[] {
+  static extractHomework(
+    responseData: unknown,
+    daysBack: number = 7,
+    referenceDate?: Date
+  ): HomeworkEntry[] {
     const result: HomeworkEntry[] = [];
 
     if (
@@ -40,7 +44,7 @@ export class HomeworkExtractor {
       return result;
     }
 
-    const today = startOfDay(new Date());
+    const today = startOfDay(referenceDate || new Date());
     const cutoffDate = startOfDay(subDays(today, daysBack));
 
     for (const group of data.Groups) {

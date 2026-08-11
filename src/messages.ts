@@ -2,11 +2,13 @@
  * Messages parsing and fetching from Wilma
  */
 
+import type { AnyNode } from 'domhandler';
 import * as cheerio from 'cheerio';
 import { AxiosInstance } from 'axios';
 import { URL } from 'url';
 import { MessageDetailService, MessageDetail } from './messages_detail_helper.js';
 import { WilmaHttpClient, formatError } from './http.js';
+import { logger } from './logger.js';
 
 export interface MessageListItem {
   id: string;
@@ -42,7 +44,7 @@ export class MessagesClient {
           try {
             raw = JSON.parse(raw);
           } catch (err) {
-            console.warn('[Wilma] Failed to parse messages JSON response:', formatError(err));
+            logger.warn('Failed to parse messages JSON response:', formatError(err));
             raw = null;
           }
         }
@@ -77,7 +79,7 @@ export class MessagesClient {
                 const d = await this.detailService.fetch(childId, String(id));
                 details.push(d);
               } catch (err) {
-                console.warn('[Wilma] Failed to fetch message detail for message', id, ':', formatError(err));
+                logger.warn('Failed to fetch message detail for message', id, ':', formatError(err));
               }
               filtered.push({ id: String(id), subject, from, date: dateRaw });
             }
@@ -87,7 +89,7 @@ export class MessagesClient {
         }
       }
     } catch (err) {
-      console.warn('[Wilma] Failed to fetch messages via JSON API, falling back to HTML:', formatError(err));
+      logger.warn('Failed to fetch messages via JSON API, falling back to HTML:', formatError(err));
     }
 
     const messagesUrl = new URL(`!${childId}/messages`, this.baseUrl).toString();
@@ -95,9 +97,16 @@ export class MessagesClient {
     const body = typeof res.data === 'string' ? res.data : JSON.stringify(res.data);
 
     const $ = cheerio.load(body);
-    const messages: Array<any> = [];
+    interface ParsedLink {
+      id: string | null;
+      href: string;
+      subject: string | null;
+      from: string | null;
+      date: string | null;
+    }
+    const messages: ParsedLink[] = [];
     const linkSelector = `a[href*="/!${childId}/messages/"]`;
-    $(linkSelector).each((_, el) => {
+    $(linkSelector).each((_index: number, el: AnyNode) => {
       const href = $(el).attr('href') || '';
       const m = href.match(/\/messages\/(\d+)/);
       const id = m ? m[1] : null;
@@ -112,13 +121,13 @@ export class MessagesClient {
     });
 
     if (messages.length === 0) {
-      $('a[href]').each((_, el) => {
+      $('a[href]').each((_index: number, el: AnyNode) => {
         const href = $(el).attr('href') || '';
         if (href.includes('/messages/')) {
           const m = href.match(/\/messages\/(\d+)/);
           const id = m ? m[1] : null;
           const subject = $(el).text().trim() || null;
-          messages.push({ id, href, subject, date: null });
+          messages.push({ id, href, subject, from: null, date: null });
         }
       });
     }
@@ -147,18 +156,18 @@ export class MessagesClient {
             details.push(d);
           }
           } catch (err) {
-            console.warn('[Wilma] Failed to fetch message detail for message', msg.id, ':', formatError(err));
+            logger.warn('Failed to fetch message detail for message', msg.id, ':', formatError(err));
           }
         } else {
           try {
             const d = await this.detailService.fetch(childId, msg.id);
             details.push(d);
           } catch (err) {
-            console.warn('[Wilma] Failed to fetch message detail for message', msg.id, ':', formatError(err));
+            logger.warn('Failed to fetch message detail for message', msg.id, ':', formatError(err));
         }
       }
 
-      if (include) filteredMessages.push(msg);
+      if (include && msg.id) filteredMessages.push({ id: msg.id, subject: msg.subject, from: msg.from, date: msg.date });
     }
 
     return { list: filteredMessages, details };

@@ -1,0 +1,4022 @@
+{
+    "Role": "guardian",
+    "AddAppt": false,
+    "Schedule": [
+        {
+            "ReservationID": 9980,
+            "ScheduleID": 1222370792,
+            "Day": 1,
+            "Start": "08:00",
+            "End": "08:45",
+            "Class": "5B",
+            "AllowEdit": false,
+            "AllowAddMoveRemove": false,
+            "DateArray": [
+                "2025-12-01",
+                "2025-12-08",
+                "2025-12-15"
+            ],
+            "Groups": [
+                {
+                    "Id": 1096541,
+                    "CourseId": 66176,
+                    "ShowActions": {
+                        "Diary": false,
+                        "Attendance": false,
+                        "Grading": false
+                    },
+                    "ShortCaption": "ENA1.A",
+                    "Caption": "ENA1.A",
+                    "FullCaption": "Englanti, A1-kieli",
+                    "Class": "5B",
+                    "Teachers": [
+                        {
+                            "Id": 1914,
+                            "Caption": "SaalaMe",
+                            "LongCaption": "Saalasti Merja",
+                            "ScheduleVisible": true
+                        }
+                    ],
+                    "Rooms": [
+                        {
+                            "Id": 2575,
+                            "Caption": "E1\/1",
+                            "LongCaption": "Kieli LR1",
+                            "ScheduleVisible": true
+                        },
+                        {
+                            "Id": 2576,
+                            "Caption": "E1\/2",
+                            "LongCaption": "Kieli LR2",
+                            "ScheduleVisible": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "ReservationID": 9995,
+            "ScheduleID": 1222370792,
+            "Day": 1,
+            "Start": "08:45",
+            "End": "09:30",
+            "Class": "5B",
+            "AllowEdit": false,
+            "AllowAddMoveRemove": false,
+            "DateArray": [
+                "2025-12-01",
+                "2025-12-08",
+                "2025-12-15"
+            ],
+            "Groups": [
+                {
+                    "Id": 1096584,
+                    "CourseId": 66174,
+                    "ShowActions": {
+                        "Diary": false,
+                        "Attendance": false,
+                        "Grading": false
+                    },
+                    "ShortCaption": "ÄI.A",
+                    "Caption": "ÄI.A",
+                    "FullCaption": "- Suomen kieli ja kirjallisuus",
+                    "Class": "5B",
+                    "Teachers": [
+                        {
+                            "Id": 318,
+                            "Caption": "LuukkHa",
+                            "LongCaption": "Luukkonen Hannele",
+                            "ScheduleVisible": true
+                        }
+                    ],
+                    "Rooms": [
+                        {
+                            "Id": 2578,
+                            "Caption": "E1\/4",
+                            "LongCaption": "5B Hannele",
+                            "ScheduleVisible": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "ReservationID": 9984,
+            "ScheduleID": 1222370792,
+            "Day": 1,
+            "Start": "10:00",
+            "End": "10:45",
+            "Class": "5B",
+            "AllowEdit": false,
+            "AllowAddMoveRemove": false,
+            "DateArray": [
+                "2025-12-01",
+                "2025-12-08",
+                "2025-12-15"
+            ],
+            "Groups": [
+                {
+                    "Id": 1096552,
+                    "CourseId": 66198,
+                    "ShowActions": {
+                        "Diary": false,
+                        "Attendance": false,
+                        "Grading": false
+                    },
+                    "ShortCaption": "KU",
+                    "Caption": "KU",
+                    "FullCaption": "Kuvataide",
+                    "Class": "5B",
+                    "Teachers": [
+                        {
+                            "Id": 318,
+                            "Caption": "LuukkHa",
+                            "LongCaption": "Luukkonen Hannele",
+                            "ScheduleVisible": true
+                        }
+                    ],
+                    "Rooms": [
+                        {
+                            "Id": 2578,
+                            "Caption": "E1\/4",
+                            "LongCaption": "5B Hannele",
+                            "ScheduleVisible": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "ReservationID": 9985,
+            "ScheduleID": 1222370792,
+            "Day": 1,
+            "Start": "10:45",
+            "End": "11:45",
+            "Class": "5B",
+            "AllowEdit": false,
+            "AllowAddMoveRemove": false,
+            "DateArray": [
+                "2025-12-01",
+                "2025-12-08",
+                "2025-12-15"
+            ],
+            "Groups": [
+                {
+                    "Id": 1096555,
+                    "CourseId": 64237,
+                    "ShowActions": {
+                        "Diary": false,
+                        "Attendance": false,
+                        "Grading": false
+                    },
+                    "ShortCaption": "KUVx",
+                    "Caption": "KUVx",
+                    "FullCaption": "valinnaiset opinnot",
+                    "Class": "5B",
+                    "Teachers": [
+                        {
+                            "Id": 318,
+                            "Caption": "LuukkHa",
+                            "LongCaption": "Luukkonen Hannele",
+                            "ScheduleVisible": true
+                        }
+                    ],
+                    "Rooms": [
+                        {
+                            "Id": 2578,
+                            "Caption": "E1\/4",
+                            "LongCaption": "5B Hannele",
+                            "ScheduleVisible": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "ReservationID": 9986,
+            "ScheduleID": 1222370792,
+            "Day": 1,
+            "Start": "12:30",
+            "End": "14:00",
+            "Class": "5B",
+            "AllowEdit": false,
+            "AllowAddMoveRemove": false,
+            "DateArray": [
+                "2025-12-01",
+                "2025-12-08",
+                "2025-12-15"
+            ],
+            "Groups": [
+                {
+                    "Id": 1096558,
+                    "CourseId": 66199,
+                    "ShowActions": {
+                        "Diary": false,
+                        "Attendance": false,
+                        "Grading": false
+                    },
+                    "ShortCaption": "KÄS",
+                    "Caption": "KÄS",
+                    "FullCaption": "Käsityö",
+                    "Class": "5B",
+                    "Teachers": [
+                        {
+                            "Id": 318,
+                            "Caption": "LuukkHa",
+                            "LongCaption": "Luukkonen Hannele",
+                            "ScheduleVisible": true
+                        },
+                        {
+                            "Id": 7711,
+                            "Caption": "WalliSi",
+                            "LongCaption": "Wallin Simo",
+                            "ScheduleVisible": true
+                        }
+                    ],
+                    "Rooms": [
+                        {
+                            "Id": 3617,
+                            "Caption": "SI TEKNINEN",
+                            "LongCaption": "SI TEKNINEN",
+                            "ScheduleVisible": true
+                        },
+                        {
+                            "Id": 3618,
+                            "Caption": "SI TEKSTIILI",
+                            "LongCaption": "SI TEKSTIILI",
+                            "ScheduleVisible": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "ReservationID": 9988,
+            "ScheduleID": 1222370792,
+            "Day": 2,
+            "Start": "08:00",
+            "End": "08:45",
+            "Class": "5B",
+            "AllowEdit": false,
+            "AllowAddMoveRemove": false,
+            "DateArray": [
+                "2025-11-25",
+                "2025-12-02",
+                "2025-12-09",
+                "2025-12-16"
+            ],
+            "Groups": [
+                {
+                    "Id": 1096561,
+                    "CourseId": 66200,
+                    "ShowActions": {
+                        "Diary": false,
+                        "Attendance": false,
+                        "Grading": false
+                    },
+                    "ShortCaption": "LI",
+                    "Caption": "LI",
+                    "FullCaption": "Liikunta",
+                    "Class": "5B",
+                    "Teachers": [
+                        {
+                            "Id": 318,
+                            "Caption": "LuukkHa",
+                            "LongCaption": "Luukkonen Hannele",
+                            "ScheduleVisible": true
+                        }
+                    ],
+                    "Rooms": [
+                        {
+                            "Id": 1361,
+                            "Caption": "1C38",
+                            "LongCaption": "Peilisali",
+                            "ScheduleVisible": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "ReservationID": 11452,
+            "ScheduleID": 1222370792,
+            "Day": 2,
+            "Start": "08:45",
+            "End": "09:30",
+            "Class": "5B",
+            "AllowEdit": false,
+            "AllowAddMoveRemove": false,
+            "DateArray": [
+                "2025-11-25",
+                "2025-12-02",
+                "2025-12-09",
+                "2025-12-16"
+            ],
+            "Groups": [
+                {
+                    "Id": 1096538,
+                    "CourseId": 66176,
+                    "ShowActions": {
+                        "Diary": false,
+                        "Attendance": false,
+                        "Grading": false
+                    },
+                    "ShortCaption": "ENA1",
+                    "Caption": "ENA1",
+                    "FullCaption": "Englanti, A1-kieli",
+                    "Class": "5B",
+                    "Teachers": [
+                        {
+                            "Id": 1914,
+                            "Caption": "SaalaMe",
+                            "LongCaption": "Saalasti Merja",
+                            "ScheduleVisible": true
+                        }
+                    ],
+                    "Rooms": [
+                        {
+                            "Id": 2578,
+                            "Caption": "E1\/4",
+                            "LongCaption": "5B Hannele",
+                            "ScheduleVisible": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "ReservationID": 11492,
+            "ScheduleID": 1222370792,
+            "Day": 2,
+            "Start": "10:00",
+            "End": "11:45",
+            "Class": "5B",
+            "AllowEdit": false,
+            "AllowAddMoveRemove": false,
+            "DateArray": [
+                "2025-11-25",
+                "2025-12-02",
+                "2025-12-09",
+                "2025-12-16"
+            ],
+            "Groups": [
+                {
+                    "Id": 1096578,
+                    "CourseId": 66189,
+                    "ShowActions": {
+                        "Diary": false,
+                        "Attendance": false,
+                        "Grading": false
+                    },
+                    "ShortCaption": "YM",
+                    "Caption": "YM",
+                    "FullCaption": "Ympäristöoppi",
+                    "Class": "5B",
+                    "Teachers": [
+                        {
+                            "Id": 318,
+                            "Caption": "LuukkHa",
+                            "LongCaption": "Luukkonen Hannele",
+                            "ScheduleVisible": true
+                        }
+                    ],
+                    "Rooms": [
+                        {
+                            "Id": 2578,
+                            "Caption": "E1\/4",
+                            "LongCaption": "5B Hannele",
+                            "ScheduleVisible": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "ReservationID": 9989,
+            "ScheduleID": 1222370792,
+            "Day": 2,
+            "Start": "12:30",
+            "End": "13:15",
+            "Class": "5B",
+            "AllowEdit": false,
+            "AllowAddMoveRemove": false,
+            "DateArray": [
+                "2025-11-25",
+                "2025-12-02",
+                "2025-12-09",
+                "2025-12-16"
+            ],
+            "Groups": [
+                {
+                    "Id": 1096564,
+                    "CourseId": 66188,
+                    "ShowActions": {
+                        "Diary": false,
+                        "Attendance": false,
+                        "Grading": false
+                    },
+                    "ShortCaption": "MA",
+                    "Caption": "MA",
+                    "FullCaption": "Matematiikka",
+                    "Class": "5B",
+                    "Teachers": [
+                        {
+                            "Id": 318,
+                            "Caption": "LuukkHa",
+                            "LongCaption": "Luukkonen Hannele",
+                            "ScheduleVisible": true
+                        }
+                    ],
+                    "Rooms": [
+                        {
+                            "Id": 2578,
+                            "Caption": "E1\/4",
+                            "LongCaption": "5B Hannele",
+                            "ScheduleVisible": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "ReservationID": 11508,
+            "ScheduleID": 1222370792,
+            "Day": 2,
+            "Start": "13:15",
+            "End": "14:00",
+            "Class": "5B",
+            "AllowEdit": false,
+            "AllowAddMoveRemove": false,
+            "DateArray": [
+                "2025-11-25",
+                "2025-12-02",
+                "2025-12-09",
+                "2025-12-16"
+            ],
+            "Groups": [
+                {
+                    "ShortCaption": "Kaveritunti",
+                    "Caption": "Kaveritunti",
+                    "FullCaption": "Kaveritunti",
+                    "Class": "5B",
+                    "Teachers": [
+                        {
+                            "Id": 318,
+                            "Caption": "LuukkHa",
+                            "LongCaption": "Luukkonen Hannele",
+                            "ScheduleVisible": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "ReservationID": 9994,
+            "ScheduleID": 1222370792,
+            "Day": 2,
+            "Start": "13:15",
+            "End": "14:00",
+            "Class": "5B",
+            "AllowEdit": false,
+            "AllowAddMoveRemove": false,
+            "DateArray": [
+                "2025-11-25",
+                "2025-12-02",
+                "2025-12-09",
+                "2025-12-16"
+            ],
+            "Groups": [
+                {
+                    "Id": 1096581,
+                    "CourseId": 66174,
+                    "ShowActions": {
+                        "Diary": false,
+                        "Attendance": false,
+                        "Grading": false
+                    },
+                    "ShortCaption": "ÄI",
+                    "Caption": "ÄI",
+                    "FullCaption": "- Suomen kieli ja kirjallisuus",
+                    "Class": "5B",
+                    "Teachers": [
+                        {
+                            "Id": 318,
+                            "Caption": "LuukkHa",
+                            "LongCaption": "Luukkonen Hannele",
+                            "ScheduleVisible": true
+                        }
+                    ],
+                    "Rooms": [
+                        {
+                            "Id": 2578,
+                            "Caption": "E1\/4",
+                            "LongCaption": "5B Hannele",
+                            "ScheduleVisible": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "ReservationID": 9991,
+            "ScheduleID": 1222370792,
+            "Day": 3,
+            "Start": "10:00",
+            "End": "10:45",
+            "Class": "5B",
+            "AllowEdit": false,
+            "AllowAddMoveRemove": false,
+            "DateArray": [
+                "2025-11-26",
+                "2025-12-03",
+                "2025-12-10",
+                "2025-12-17"
+            ],
+            "Groups": [
+                {
+                    "Id": 1096572,
+                    "CourseId": 66190,
+                    "ShowActions": {
+                        "Diary": false,
+                        "Attendance": false,
+                        "Grading": false
+                    },
+                    "ShortCaption": "UE",
+                    "Caption": "UE",
+                    "FullCaption": "Uskonto\/Elämänkatsomustieto",
+                    "Class": "5B",
+                    "Teachers": [
+                        {
+                            "Id": 318,
+                            "Caption": "LuukkHa",
+                            "LongCaption": "Luukkonen Hannele",
+                            "ScheduleVisible": true
+                        }
+                    ],
+                    "Rooms": [
+                        {
+                            "Id": 2578,
+                            "Caption": "E1\/4",
+                            "LongCaption": "5B Hannele",
+                            "ScheduleVisible": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "ReservationID": 9993,
+            "ScheduleID": 1222370792,
+            "Day": 3,
+            "Start": "10:45",
+            "End": "11:45",
+            "Class": "5B",
+            "AllowEdit": false,
+            "AllowAddMoveRemove": false,
+            "DateArray": [
+                "2025-11-26",
+                "2025-12-03",
+                "2025-12-10",
+                "2025-12-17"
+            ],
+            "Groups": [
+                {
+                    "Id": 1096578,
+                    "CourseId": 66189,
+                    "ShowActions": {
+                        "Diary": false,
+                        "Attendance": false,
+                        "Grading": false
+                    },
+                    "ShortCaption": "YM",
+                    "Caption": "YM",
+                    "FullCaption": "Ympäristöoppi",
+                    "Class": "5B",
+                    "Teachers": [
+                        {
+                            "Id": 318,
+                            "Caption": "LuukkHa",
+                            "LongCaption": "Luukkonen Hannele",
+                            "ScheduleVisible": true
+                        }
+                    ],
+                    "Rooms": [
+                        {
+                            "Id": 2578,
+                            "Caption": "E1\/4",
+                            "LongCaption": "5B Hannele",
+                            "ScheduleVisible": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "ReservationID": 11506,
+            "ScheduleID": 1222370792,
+            "Day": 3,
+            "Start": "12:30",
+            "End": "13:15",
+            "Class": "5B",
+            "AllowEdit": false,
+            "AllowAddMoveRemove": false,
+            "DateArray": [
+                "2025-11-26",
+                "2025-12-03",
+                "2025-12-10",
+                "2025-12-17"
+            ],
+            "Groups": [
+                {
+                    "Id": 1096564,
+                    "CourseId": 66188,
+                    "ShowActions": {
+                        "Diary": false,
+                        "Attendance": false,
+                        "Grading": false
+                    },
+                    "ShortCaption": "MA",
+                    "Caption": "MA",
+                    "FullCaption": "Matematiikka",
+                    "Class": "5B",
+                    "Teachers": [
+                        {
+                            "Id": 318,
+                            "Caption": "LuukkHa",
+                            "LongCaption": "Luukkonen Hannele",
+                            "ScheduleVisible": true
+                        }
+                    ],
+                    "Rooms": [
+                        {
+                            "Id": 2578,
+                            "Caption": "E1\/4",
+                            "LongCaption": "5B Hannele",
+                            "ScheduleVisible": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "ReservationID": 9990,
+            "ScheduleID": 1222370792,
+            "Day": 3,
+            "Start": "13:15",
+            "End": "14:00",
+            "Class": "5B",
+            "AllowEdit": false,
+            "AllowAddMoveRemove": false,
+            "DateArray": [
+                "2025-11-26",
+                "2025-12-03",
+                "2025-12-10",
+                "2025-12-17"
+            ],
+            "Groups": [
+                {
+                    "Id": 1096569,
+                    "CourseId": 66197,
+                    "ShowActions": {
+                        "Diary": false,
+                        "Attendance": false,
+                        "Grading": false
+                    },
+                    "ShortCaption": "MU",
+                    "Caption": "MU",
+                    "FullCaption": "Musiikki",
+                    "Class": "5B",
+                    "Teachers": [
+                        {
+                            "Id": 8404,
+                            "Caption": "KorpeHi",
+                            "LongCaption": "Korpela Hilla",
+                            "ScheduleVisible": true
+                        }
+                    ],
+                    "Rooms": [
+                        {
+                            "Id": 2579,
+                            "Caption": "E1\/5",
+                            "LongCaption": "Musiikki Minari",
+                            "ScheduleVisible": true
+                        },
+                        {
+                            "Id": 2580,
+                            "Caption": "E1\/6",
+                            "LongCaption": "Jakotila Minari alakerta",
+                            "ScheduleVisible": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "ReservationID": 9978,
+            "ScheduleID": 1222370792,
+            "Day": 3,
+            "Start": "14:15",
+            "End": "15:00",
+            "Class": "5B",
+            "AllowEdit": false,
+            "AllowAddMoveRemove": false,
+            "DateArray": [
+                "2025-11-26",
+                "2025-12-03",
+                "2025-12-10",
+                "2025-12-17"
+            ],
+            "Groups": [
+                {
+                    "Id": 1096538,
+                    "CourseId": 66176,
+                    "ShowActions": {
+                        "Diary": false,
+                        "Attendance": false,
+                        "Grading": false
+                    },
+                    "ShortCaption": "ENA1",
+                    "Caption": "ENA1",
+                    "FullCaption": "Englanti, A1-kieli",
+                    "Class": "5B",
+                    "Teachers": [
+                        {
+                            "Id": 1914,
+                            "Caption": "SaalaMe",
+                            "LongCaption": "Saalasti Merja",
+                            "ScheduleVisible": true
+                        }
+                    ],
+                    "Rooms": [
+                        {
+                            "Id": 2578,
+                            "Caption": "E1\/4",
+                            "LongCaption": "5B Hannele",
+                            "ScheduleVisible": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "ReservationID": 9992,
+            "ScheduleID": 1222370792,
+            "Day": 4,
+            "Start": "10:00",
+            "End": "10:45",
+            "Class": "5B",
+            "AllowEdit": false,
+            "AllowAddMoveRemove": false,
+            "DateArray": [
+                "2025-11-27",
+                "2025-12-04",
+                "2025-12-11",
+                "2025-12-18"
+            ],
+            "Groups": [
+                {
+                    "Id": 1096575,
+                    "CourseId": 66196,
+                    "ShowActions": {
+                        "Diary": false,
+                        "Attendance": false,
+                        "Grading": false
+                    },
+                    "ShortCaption": "YH",
+                    "Caption": "YH",
+                    "FullCaption": "Yhteiskuntaoppi",
+                    "Class": "5B",
+                    "Teachers": [
+                        {
+                            "Id": 318,
+                            "Caption": "LuukkHa",
+                            "LongCaption": "Luukkonen Hannele",
+                            "ScheduleVisible": true
+                        }
+                    ],
+                    "Rooms": [
+                        {
+                            "Id": 2578,
+                            "Caption": "E1\/4",
+                            "LongCaption": "5B Hannele",
+                            "ScheduleVisible": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "ReservationID": 11504,
+            "ScheduleID": 1222370792,
+            "Day": 4,
+            "Start": "10:45",
+            "End": "11:45",
+            "Class": "5B",
+            "AllowEdit": false,
+            "AllowAddMoveRemove": false,
+            "DateArray": [
+                "2025-11-27",
+                "2025-12-04",
+                "2025-12-11",
+                "2025-12-18"
+            ],
+            "Groups": [
+                {
+                    "Id": 1096564,
+                    "CourseId": 66188,
+                    "ShowActions": {
+                        "Diary": false,
+                        "Attendance": false,
+                        "Grading": false
+                    },
+                    "ShortCaption": "MA",
+                    "Caption": "MA",
+                    "FullCaption": "Matematiikka",
+                    "Class": "5B",
+                    "Teachers": [
+                        {
+                            "Id": 318,
+                            "Caption": "LuukkHa",
+                            "LongCaption": "Luukkonen Hannele",
+                            "ScheduleVisible": true
+                        }
+                    ],
+                    "Rooms": [
+                        {
+                            "Id": 2578,
+                            "Caption": "E1\/4",
+                            "LongCaption": "5B Hannele",
+                            "ScheduleVisible": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "ReservationID": 9983,
+            "ScheduleID": 1222370792,
+            "Day": 4,
+            "Start": "12:30",
+            "End": "13:15",
+            "Class": "5B",
+            "AllowEdit": false,
+            "AllowAddMoveRemove": false,
+            "DateArray": [
+                "2025-11-27",
+                "2025-12-04",
+                "2025-12-11",
+                "2025-12-18"
+            ],
+            "Groups": [
+                {
+                    "Id": 1096549,
+                    "CourseId": 66195,
+                    "ShowActions": {
+                        "Diary": false,
+                        "Attendance": false,
+                        "Grading": false
+                    },
+                    "ShortCaption": "HI",
+                    "Caption": "HI",
+                    "FullCaption": "Historia",
+                    "Class": "5B",
+                    "Teachers": [
+                        {
+                            "Id": 318,
+                            "Caption": "LuukkHa",
+                            "LongCaption": "Luukkonen Hannele",
+                            "ScheduleVisible": true
+                        }
+                    ],
+                    "Rooms": [
+                        {
+                            "Id": 2578,
+                            "Caption": "E1\/4",
+                            "LongCaption": "5B Hannele",
+                            "ScheduleVisible": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "ReservationID": 11502,
+            "ScheduleID": 1222370792,
+            "Day": 4,
+            "Start": "13:15",
+            "End": "14:00",
+            "Class": "5B",
+            "AllowEdit": false,
+            "AllowAddMoveRemove": false,
+            "DateArray": [
+                "2025-11-27",
+                "2025-12-04",
+                "2025-12-11",
+                "2025-12-18"
+            ],
+            "Groups": [
+                {
+                    "Id": 1096581,
+                    "CourseId": 66174,
+                    "ShowActions": {
+                        "Diary": false,
+                        "Attendance": false,
+                        "Grading": false
+                    },
+                    "ShortCaption": "ÄI",
+                    "Caption": "ÄI",
+                    "FullCaption": "- Suomen kieli ja kirjallisuus",
+                    "Class": "5B",
+                    "Teachers": [
+                        {
+                            "Id": 318,
+                            "Caption": "LuukkHa",
+                            "LongCaption": "Luukkonen Hannele",
+                            "ScheduleVisible": true
+                        }
+                    ],
+                    "Rooms": [
+                        {
+                            "Id": 2578,
+                            "Caption": "E1\/4",
+                            "LongCaption": "5B Hannele",
+                            "ScheduleVisible": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "ReservationID": 11495,
+            "ScheduleID": 1222370792,
+            "Day": 5,
+            "Start": "10:00",
+            "End": "10:45",
+            "Class": "5B",
+            "AllowEdit": false,
+            "AllowAddMoveRemove": false,
+            "DateArray": [
+                "2025-11-28",
+                "2025-12-05",
+                "2025-12-12",
+                "2025-12-19"
+            ],
+            "Groups": [
+                {
+                    "Id": 1096581,
+                    "CourseId": 66174,
+                    "ShowActions": {
+                        "Diary": false,
+                        "Attendance": false,
+                        "Grading": false
+                    },
+                    "ShortCaption": "ÄI",
+                    "Caption": "ÄI",
+                    "FullCaption": "- Suomen kieli ja kirjallisuus",
+                    "Class": "5B",
+                    "Teachers": [
+                        {
+                            "Id": 318,
+                            "Caption": "LuukkHa",
+                            "LongCaption": "Luukkonen Hannele",
+                            "ScheduleVisible": true
+                        }
+                    ],
+                    "Rooms": [
+                        {
+                            "Id": 2578,
+                            "Caption": "E1\/4",
+                            "LongCaption": "5B Hannele",
+                            "ScheduleVisible": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "ReservationID": 11498,
+            "ScheduleID": 1222370792,
+            "Day": 5,
+            "Start": "10:45",
+            "End": "11:45",
+            "Class": "5B",
+            "AllowEdit": false,
+            "AllowAddMoveRemove": false,
+            "DateArray": [
+                "2025-11-28",
+                "2025-12-05",
+                "2025-12-12",
+                "2025-12-19"
+            ],
+            "Groups": [
+                {
+                    "Id": 1096564,
+                    "CourseId": 66188,
+                    "ShowActions": {
+                        "Diary": false,
+                        "Attendance": false,
+                        "Grading": false
+                    },
+                    "ShortCaption": "MA",
+                    "Caption": "MA",
+                    "FullCaption": "Matematiikka",
+                    "Class": "5B",
+                    "Teachers": [
+                        {
+                            "Id": 318,
+                            "Caption": "LuukkHa",
+                            "LongCaption": "Luukkonen Hannele",
+                            "ScheduleVisible": true
+                        }
+                    ],
+                    "Rooms": [
+                        {
+                            "Id": 2578,
+                            "Caption": "E1\/4",
+                            "LongCaption": "5B Hannele",
+                            "ScheduleVisible": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "ReservationID": 9987,
+            "ScheduleID": 1222370792,
+            "Day": 5,
+            "Start": "12:30",
+            "End": "14:00",
+            "Class": "5B",
+            "AllowEdit": false,
+            "AllowAddMoveRemove": false,
+            "DateArray": [
+                "2025-11-28",
+                "2025-12-05",
+                "2025-12-12",
+                "2025-12-19"
+            ],
+            "Groups": [
+                {
+                    "Id": 1096561,
+                    "CourseId": 66200,
+                    "ShowActions": {
+                        "Diary": false,
+                        "Attendance": false,
+                        "Grading": false
+                    },
+                    "ShortCaption": "LI",
+                    "Caption": "LI",
+                    "FullCaption": "Liikunta",
+                    "Class": "5B",
+                    "Teachers": [
+                        {
+                            "Id": 4910,
+                            "Caption": "TurpeHe",
+                            "LongCaption": "Turpeinen Heikki",
+                            "ScheduleVisible": true
+                        }
+                    ],
+                    "Rooms": [
+                        {
+                            "Id": 3613,
+                            "Caption": "SI LIIKUNTASALI",
+                            "LongCaption": "SI LIIKUNTASALI",
+                            "ScheduleVisible": true
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "Exams": [
+        {
+            "Id": 1096578,
+            "ExamId": 602101,
+            "Course": "YM YM5s",
+            "CourseId": 66189,
+            "Name": "Läksynkysely",
+            "CourseTitle": "YM 5 lk syksy",
+            "Grade": "8",
+            "ExamSeen": "2025-11-25",
+            "ExamSeenDate": "Ti 25.11.2025",
+            "Teachers": [
+                {
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "TeacherId": 7711,
+                    "TeacherName": "Wallin Simo",
+                    "TeacherCode": "WalliSi"
+                },
+                {
+                    "TeacherId": 9456,
+                    "TeacherName": "Suomalainen Johanna",
+                    "TeacherCode": "SuomaJo"
+                },
+                {
+                    "TeacherId": 697,
+                    "TeacherName": "Vehkaperä Antti",
+                    "TeacherCode": "VehkaAn"
+                }
+            ],
+            "Date": "25.11.2025",
+            "Info": "Läksynkysely: maanosat ja ilmansuunnat"
+        },
+        {
+            "Id": 1096578,
+            "ExamId": 598821,
+            "Course": "YM YM5s",
+            "CourseId": 66189,
+            "Name": "Ympäristöopin koe",
+            "CourseTitle": "YM 5 lk syksy",
+            "Grade": "7-",
+            "ExamSeen": "2025-12-01",
+            "ExamSeenDate": "Ma 1.12.2025",
+            "Teachers": [
+                {
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "TeacherId": 7711,
+                    "TeacherName": "Wallin Simo",
+                    "TeacherCode": "WalliSi"
+                },
+                {
+                    "TeacherId": 9456,
+                    "TeacherName": "Suomalainen Johanna",
+                    "TeacherCode": "SuomaJo"
+                },
+                {
+                    "TeacherId": 697,
+                    "TeacherName": "Vehkaperä Antti",
+                    "TeacherCode": "VehkaAn"
+                }
+            ],
+            "Date": "26.11.2025",
+            "Info": "Ympäristöopin Pisara- kirjasta jakso 3 Planeetta maa kappaleet 11-14 sekä vihkomuistiinpanot"
+        },
+        {
+            "Id": 1096581,
+            "ExamId": 597533,
+            "Course": "ÄI ÄI5s",
+            "CourseId": 66174,
+            "Name": "Kielitiedon koe",
+            "CourseTitle": "ÄI 5 lk syksy",
+            "Teachers": [
+                {
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "TeacherId": 7711,
+                    "TeacherName": "Wallin Simo",
+                    "TeacherCode": "WalliSi"
+                },
+                {
+                    "TeacherId": 9456,
+                    "TeacherName": "Suomalainen Johanna",
+                    "TeacherCode": "SuomaJo"
+                }
+            ],
+            "Date": "1.12.2025",
+            "Info": "Lauseenjäsennys Taitojen vihko s. 38"
+        },
+        {
+            "Id": 1096538,
+            "ExamId": 602684,
+            "Course": "ENA1 ENA15s",
+            "CourseId": 66176,
+            "Name": "Tuntityöskentelyn arviointi syyslukukaudella",
+            "CourseTitle": "ENA1 5 lk syksy",
+            "Teachers": [
+                {
+                    "TeacherId": 1914,
+                    "TeacherName": "Saalasti Merja",
+                    "TeacherCode": "SaalaMe"
+                },
+                {
+                    "TeacherId": 1743,
+                    "TeacherName": "Saarinen Elina",
+                    "TeacherCode": "SaariEl"
+                },
+                {
+                    "TeacherId": 9456,
+                    "TeacherName": "Suomalainen Johanna",
+                    "TeacherCode": "SuomaJo"
+                }
+            ],
+            "Date": "2.12.2025",
+            "Info": "Tuntityöskentelyn arviointi:\r\n-työskentely-ja vuorovaikutustaidot\r\n-kotitehtävistä ja opiskeluvälineistä huolehtiminen\r\n-tuntiharjoituksiin osallistuminen\r\n-vastuunottaminen omasta opiskelusta\r\n-parhaansa yrittäminen\r\n-pari-ja ryhmätyöskentely"
+        },
+        {
+            "Id": 1096572,
+            "ExamId": 604426,
+            "Course": "UE UE5s",
+            "CourseId": 66190,
+            "Name": "Aineistotesti: Aarre kpl 13",
+            "CourseTitle": "UE 5 lk syksy",
+            "Teachers": [
+                {
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "TeacherId": 7711,
+                    "TeacherName": "Wallin Simo",
+                    "TeacherCode": "WalliSi"
+                }
+            ],
+            "Date": "3.12.2025",
+            "Info": "Tunnilla tehty kpl 13 koskeva Forms-testi. Oppilailla ollut kirjan teksti esillä vastatessa."
+        },
+        {
+            "Id": 1096572,
+            "ExamId": 604141,
+            "Course": "UE UE5s",
+            "CourseId": 66190,
+            "Name": "Vihko- ja tuntityöskentely",
+            "CourseTitle": "UE 5 lk syksy",
+            "Teachers": [
+                {
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "TeacherId": 7711,
+                    "TeacherName": "Wallin Simo",
+                    "TeacherCode": "WalliSi"
+                }
+            ],
+            "Date": "3.12.2025"
+        },
+        {
+            "Id": 1096549,
+            "ExamId": 604748,
+            "Course": "HI HI5s",
+            "CourseId": 66195,
+            "Name": "Historian aineistotesti kpl 12",
+            "CourseTitle": "HI5 lk syksy",
+            "Teachers": [
+                {
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "TeacherId": 7711,
+                    "TeacherName": "Wallin Simo",
+                    "TeacherCode": "WalliSi"
+                },
+                {
+                    "TeacherId": 9456,
+                    "TeacherName": "Suomalainen Johanna",
+                    "TeacherCode": "SuomaJo"
+                }
+            ],
+            "Date": "4.12.2025"
+        },
+        {
+            "Id": 1096549,
+            "ExamId": 604507,
+            "Course": "HI HI5s",
+            "CourseId": 66195,
+            "Name": "Vihko- ja tuntityöskentely",
+            "CourseTitle": "HI5 lk syksy",
+            "Teachers": [
+                {
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "TeacherId": 7711,
+                    "TeacherName": "Wallin Simo",
+                    "TeacherCode": "WalliSi"
+                },
+                {
+                    "TeacherId": 9456,
+                    "TeacherName": "Suomalainen Johanna",
+                    "TeacherCode": "SuomaJo"
+                }
+            ],
+            "Date": "4.12.2025"
+        },
+        {
+            "Id": 1096564,
+            "ExamId": 602188,
+            "Course": "MA MA5s",
+            "CourseId": 66188,
+            "Name": "Matematiikan koe",
+            "CourseTitle": "MA 5 lk syksy",
+            "Teachers": [
+                {
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "TeacherId": 7711,
+                    "TeacherName": "Wallin Simo",
+                    "TeacherCode": "WalliSi"
+                },
+                {
+                    "TeacherId": 9456,
+                    "TeacherName": "Suomalainen Johanna",
+                    "TeacherCode": "SuomaJo"
+                },
+                {
+                    "TeacherId": 10298,
+                    "TeacherName": "Kuoppala Johanna",
+                    "TeacherCode": "KuoppJo"
+                }
+            ],
+            "Date": "8.12.2025",
+            "Info": "Tilastot ja todennäköisyys, kpl 39-45"
+        }
+    ],
+    "Groups": [
+        {
+            "Id": 1096538,
+            "CourseId": 66176,
+            "CourseName": "ENA1 5 lk syksy",
+            "CourseCode": "ENA15s",
+            "Name": "ENA1",
+            "Caption": "ENA1 ENA15s",
+            "StartDate": "2025-08-06",
+            "EndDate": "2025-12-19",
+            "Committed": false,
+            "Teachers": [
+                {
+                    "TeacherId": 1914,
+                    "TeacherName": "Saalasti Merja",
+                    "TeacherCode": "SaalaMe"
+                },
+                {
+                    "TeacherId": 1743,
+                    "TeacherName": "Saarinen Elina",
+                    "TeacherCode": "SaariEl"
+                },
+                {
+                    "TeacherId": 9456,
+                    "TeacherName": "Suomalainen Johanna",
+                    "TeacherCode": "SuomaJo"
+                }
+            ],
+            "Homework": [
+                {
+                    "RowNumber": 44,
+                    "Date": "2025-12-08",
+                    "Homework": "Tunnilla kuvasanasti 8. Kirjasta pariharkat s. 96 t. 1-2. Läpsyleikki. Kirjallinen harkka s. 97 t. 3.\r\n\r\nLäksy: sanaläksy kuvasanasto 8 ja s. 97 t. 4 (extra: t. 5)\r\n\r\nSanatesti kpl 7 ja 8 ensi ma 15.12.!"
+                },
+                {
+                    "RowNumber": 43,
+                    "Date": "2025-12-03",
+                    "Homework": "Lyhyiden adjektiivien vertailun kertausta.\r\nKirjasta pariharkka s. 92 t. 14 ja moniste. Quizlet-peli.\r\n\r\nLäksy: s. 94 t. 18"
+                },
+                {
+                    "RowNumber": 42,
+                    "Date": "2025-12-02",
+                    "Homework": "Läksyn kuulustelu pareittain kpl 7 fraaseista. Käytiin läpi sarjis TB s. 60 ja kielioppilaatikko WB s. 92. Kuunteluharkka s. 95 t. 19 ja pariharkka s. 93 t. 15a.\r\n\r\nLäksy: s. 93 t. 16a ja s. 94 t. 17 (extra: s. 95 t. 20)"
+                },
+                {
+                    "RowNumber": 41,
+                    "Date": "2025-12-01",
+                    "Homework": "Tunnilla kappalesanaston 7 opiskelu ja ääntämisen harjoittelu 7AB WB s. 88-89. Tekstin 7 suomennos, Teht. 8,10 WB s. 89-90. Läksy: kpl 7 tärkeimmät fraasit + teht 11"
+                },
+                {
+                    "RowNumber": 40,
+                    "Date": "2025-11-26",
+                    "Homework": "Tunnilla kuvasanasto 7 opiskelu ja teht. 1,2,3 WB s. 86. Läksy:  Sanaläksy kpl 7 s. 56 + WB s. 87 t. 5ab. Extra t. 4."
+                },
+                {
+                    "RowNumber": 39,
+                    "Date": "2025-11-25",
+                    "Homework": "Tiedonetsintää Australiasta. Kuunneltiin tekstikirjasta s. 54-55.\r\n\r\nLäksy: s. 85 t. 1-2\r\nextra: t. 3"
+                },
+                {
+                    "RowNumber": 38,
+                    "Date": "2025-11-24",
+                    "Homework": "Lautapeli-tunti.\r\n\r\nLäksy: mitä tiedät tai mitä sinulle tulee mieleen Australiasta?\r\n\r\nTee vihkoon mind map ja kirjoita siihen väh. 5 asiaa\r\nextra: kirjoita 8 asiaa"
+                },
+                {
+                    "RowNumber": 37,
+                    "Date": "2025-11-18",
+                    "Homework": "Koe, ei läksyä.\r\n\r\nPoissaolijat tekevät kokeen ensi ma."
+                },
+                {
+                    "RowNumber": 36,
+                    "Date": "2025-11-17",
+                    "Homework": "Tunnilla kertaustehtäviä suullisesti ja kirjallisesti. Läksy: Kertaa kokeeseen. Myös kertauspelejä Teamsissa."
+                },
+                {
+                    "RowNumber": 35,
+                    "Date": "2025-11-12",
+                    "Homework": "Tunnilla kielitiedon harjoittelu ja kertaaminen monistetehtävien avulla. Take this\/that- tehtävät WB s. 72 TAI 73:  valitsemastasi tekstistä. Läksy: Kertaa kokeeseen. Tee väh. 2 tehtävä s. 82-84 workbook"
+                },
+                {
+                    "RowNumber": 34,
+                    "Date": "2025-11-11",
+                    "Homework": "Läksyn kuulustelu kpl 6 fraaseista. Käytiin läpi sarjis s. 48 ja opiskeltiin kielioppiasia there is\/there are tehtäväkirjasta s. 74. Pariharkat t. 19 ja 20. Jaettiin koetiedote.\r\n\r\nLäksy: valitse s. 75-76 yht. 2 tehtävää\r\n(extra: tee kaikki 3)"
+                },
+                {
+                    "RowNumber": 33,
+                    "Date": "2025-11-10",
+                    "Homework": "Tunnilla kappalesanaston opiskelu s. 70 WB ja teht. 7. Tekstin kpl 6 kuuntelu ja suomennos. WB s. 71, teht. 9 ja 10 (+ WB s. 68-69, jos tekemättömiä) \r\nLäksy: Kpl 6 tärkeimmät fraasit vihkoon: opiskele hyvin. Extrana 3 lausetta kappalesanaston sanoista vihkoon."
+                },
+                {
+                    "RowNumber": 32,
+                    "Date": "2025-11-03",
+                    "Homework": "Uusi-Seelanti-visa pöytäryhmissä. Käytiin läpi kpl 6 kuvasanasto ja tehtiin tehtäväkirjasta s. 68 t. 2-3.\r\n\r\nLäksy: sanaläksy kpl 6 ja s. 69 t. 5ab (extra: t. 4ab)"
+                },
+                {
+                    "RowNumber": 31,
+                    "Date": "2025-10-29",
+                    "Homework": "Tunnilla läksynkuulustelu kpl 5 fraaseista. Sarjis s. 42 ja kielioppilaatikko s. 64. Pariharkka t. 17 ja tehtävät 18 ja 19a.\r\n\r\nLäksy: s. 66 t. 20 ja 21\r\nsanatesti ensi ti kpl 5"
+                },
+                {
+                    "RowNumber": 30,
+                    "Date": "2025-10-28",
+                    "Homework": "Tunnilla kuuntelu-ja ääntämisharkka s. 60 t. 8ab. Kuunneltiin ja toistettiin kpl 5 kappalesanasto ja kuunneltiin kpl 5. Kappaleen suomentamista kysymysten avulla.\r\n\r\nLäksy: fraasit kpl 5 ja s. 62 t. 14 (extra: t. 13)"
+                },
+                {
+                    "RowNumber": 29,
+                    "Date": "2025-10-27",
+                    "Homework": "Tunnilla Halloween-kulttuuriasiaa. Ei läksyä"
+                },
+                {
+                    "RowNumber": 28,
+                    "Date": "2025-10-15",
+                    "Homework": "Tunnilla kuvasanasto 5 opiskelu ja teht. 2, 5,6 WB. 58-59. Ei läksyä."
+                },
+                {
+                    "RowNumber": 27,
+                    "Date": "2025-10-14",
+                    "Homework": "Tunnilla sarjis s. 36 TB ja kielitieto WB s. 54. ja teht. 16, 17, 18, 22. Läksy: s. 56 t. 19 ab ja 20, extrana 21, ja harjoittele: sanatesti kuvasanastosta 4"
+                },
+                {
+                    "RowNumber": 26,
+                    "Date": "2025-10-13",
+                    "Homework": "Ääntämisharkka s. 50 t. 7. Käytiin läpi kpl 4 kappalesanasto ja kuunneltiin kpl 4. Lauseiden etsintää tekstistä. Ehtimisen mukaan s. 51 t. 8a, 9 ja 11.\r\n\r\nLäksy: opettele tärkeimmät fraasit kpl 4 + s. 51 t. 13 (extra: t. 12)"
+                },
+                {
+                    "RowNumber": 25,
+                    "Date": "2025-10-08",
+                    "Homework": "Käytiin läpi kpl 4 kuvasanasto ja tehtiin tehtäväkirjasta s. 48 kuunteluharkka t. 2 ja pariharkka t. 3. Pictionary-peli.\r\n\r\nLäksy: sanaläksy kpl 4 + s. 49 t. 5 (extra: t.  4)\r\n\r\nSanatesti ensi ke 15.10. kpl 4!"
+                },
+                {
+                    "RowNumber": 24,
+                    "Date": "2025-10-07",
+                    "Homework": "Aloitettiin jakso 2. Elina-ope kertoi vaihto-oppilasvuodestaan Uudesta-Seelannista. Kuunneltiin TB s. 30-31 ja tehtiin WB s. 47 t. 1b.\r\n\r\nLäksy: s. 47 t. 2a\r\nextra: t. 2b, 3 virkettä"
+                },
+                {
+                    "RowNumber": 23,
+                    "Date": "2025-10-06",
+                    "Homework": "Postereiden esittely.\r\n\r\nLäksy: kirjoita vihkoon väh. 5 asiaa, mitä sinulle tulee mieleen Uudesta-Seelannista tai mitä siitä jo tiedät"
+                },
+                {
+                    "RowNumber": 22,
+                    "Date": "2025-10-01",
+                    "Homework": "Tunnilla projektin viimeistely. Ei läksyä."
+                },
+                {
+                    "RowNumber": 21,
+                    "Date": "2025-09-30",
+                    "Homework": "Jatkettiin projektia.\r\n\r\nEi läksyä."
+                },
+                {
+                    "RowNumber": 20,
+                    "Date": "2025-09-29",
+                    "Homework": "Projektin aloitus \"shopping and travelling\". Jako ryhmiin ja tiedonhakua.\r\n\r\nLäksy: jatka kotona tunnilla aloitettua:\r\n-mitä vaatteita ja tavaroita tarvitsette?\r\n-paljonko hankinnat maksavat?\r\n-millä matkustatte kohteeseen?\r\n-mitä teette\/syötte kohteessa?"
+                },
+                {
+                    "RowNumber": 19,
+                    "Date": "2025-09-24",
+                    "Homework": "Tunnilla koe. Ei läksyä. \r\nJos olit poissa tunnilta, tee koe seuraavalla englannin tunnillasi."
+                },
+                {
+                    "RowNumber": 18,
+                    "Date": "2025-09-22",
+                    "Homework": "Tunnilla kertausta suullisesti ja kirjallisesti. Läksy: Harjoittele kokeeseen monisteiden ja koeohjeen avulla. Löydät monisteita luokasta. Luokan Teamsissa lisäpuuhaa: kertauspelit"
+                },
+                {
+                    "RowNumber": 17,
+                    "Date": "2025-09-17",
+                    "Homework": "Kokeisiin kertausta. Tehtiin tehtäväkirjasta s. 44-46. Jaettiin tunnin lopuksi koetiedote.\r\n\r\nLäksy: harjoittele kokeeseen kpl 1-3 (ensi ke 24.9.)"
+                },
+                {
+                    "RowNumber": 16,
+                    "Date": "2025-09-16",
+                    "Homework": "Tunnilla kestomuoto-kysymysvirkkeiden opiskelua: sarjis TB s. 24 ja ostoskeskustelu s. 25. Työkirjasta teht. s. 38: ostoskeskustelu.  Läksy: Tee kaksi tehtävää s. 37, extrana kolmas. 22, 23a, 23b"
+                },
+                {
+                    "RowNumber": 15,
+                    "Date": "2025-09-15",
+                    "Homework": "Verbien kertausta: snakes and ladders-peli ja moniste.\r\n\r\nLäksy: opettele monisteesta verbit 1-20"
+                },
+                {
+                    "RowNumber": 14,
+                    "Date": "2025-09-10",
+                    "Homework": "Tunnilla kappalesanasto WB s. 32. Suomennos teksti 3. Teht. 10, 11 s. 33. Läksy: Teksti 3A tai 3B tekstikirjasta: lue ja tee siihen liittyvät tehtävät työkirjasta: s. 34 tai 35, extrana molemmat"
+                },
+                {
+                    "RowNumber": 13,
+                    "Date": "2025-09-09",
+                    "Homework": "Käytiin läpi kpl 3 kuvasanasto. Pictionary-peli pöytäryhmissä. Kuuntelutehtävä s. 30 t. 2 ja haastattelu t. 3.\r\n\r\nLäksy: sanaläksy kpl 3 ja s. 31 t. 5\r\nextra: t. 4"
+                },
+                {
+                    "RowNumber": 12,
+                    "Date": "2025-09-08",
+                    "Homework": "Läksyn kuulustelu pöytäryhmissä viime kerran lukuläksystä. Käytiin läpi sarjis s. 18 ja kielioppilaatikko s. 26. Suulliset harjoitukset t. 14 ja t. 15 sekä t. 16a. \r\n\r\nLäksy: s. 28 t. 17ab TAI 18 (extra: tee molemmat)"
+                },
+                {
+                    "RowNumber": 11,
+                    "Date": "2025-09-03",
+                    "Homework": "Tunnilla Paddington loppuun ja sanapelit. Ei uutta läksyä: eilisen läksy tarkistetaan maanantaina."
+                },
+                {
+                    "RowNumber": 10,
+                    "Date": "2025-09-02",
+                    "Homework": "Kuunneltiin kpl 2 ja tehtiin siitä aukkosuomennosta. Tehtäväkirjasta s. 25 t. 10-11.\r\n\r\nLäksy: opettele kpl 2 fraasit suomeksi ja englanniksi! Liimattu vihkoon."
+                },
+                {
+                    "RowNumber": 9,
+                    "Date": "2025-09-01",
+                    "Homework": "Tunnilla sanatesti ja Kappalesanaston s. 22 WB opiskelu ja ääntämisharjoitukset 6AB.  \r\n-Quizlet-peli \r\n--Läksy: s. 23 t. 7 (kirjoita vihkoon) \r\nExtra: t. 8 (5 lausetta)"
+                },
+                {
+                    "RowNumber": 8,
+                    "Date": "2025-08-26",
+                    "Homework": "Tunnilla Paddington. Ei läksyä"
+                },
+                {
+                    "RowNumber": 7,
+                    "Date": "2025-08-25",
+                    "Homework": "Käytiin läpi kuvasanasto 2. Tehtäväkirjasta s. 20 t. 1 ja s. 22 t. 3. Simon says!-leikki ja Blooket-peli.\r\n\r\nLäksy: sanaläksy kpl 2 ja s. 21 t. 4b (extra: 4a)\r\nsanatesti ensi ma 1.9. kuvasanasto 1!"
+                },
+                {
+                    "RowNumber": 6,
+                    "Date": "2025-08-20",
+                    "Homework": "Tunnilla: Pariharkka workbook s. 16 t. 16, 17\r\nOlla-ja omistaa verbin kertausta (monisteen saat opelta) Läksy: s. 18-19 valitse 2 tehtävää (extra: tee kaikki 3)"
+                },
+                {
+                    "RowNumber": 5,
+                    "Date": "2025-08-19",
+                    "Homework": "Olla-ja omistaa verbien kertausta. Käytiin läpi sarjis tekstikirjasta s. 12 ja kielioppilaatikko tehtäväkirjasta s. 16. Lauseiden kirjoitusta vihkoon.\r\n\r\nLäksy: s. 17 t. 18 ja 19"
+                },
+                {
+                    "RowNumber": 4,
+                    "Date": "2025-08-18",
+                    "Homework": "Tunnilla ääntämisharjoitus WB s. 12: 7ab  \r\nKappalesanasto\r\nTehtäväkirjasta s. 13 t. 9 \r\nKuunnellaan kappale 1 teksti \"Think Pink!\" \r\nSuomennetaan\r\nLäksy: lukuläksy ja WB s. 14 teht. 13a, extrana 13b"
+                },
+                {
+                    "RowNumber": 3,
+                    "Date": "2025-08-13",
+                    "Homework": "Käytiin läpi 5. lk englannin arviointia ja tavoitteita. Kuvasanasto 1 ja siihen liiittyviä harjoituksia tehtäväkirjasta s. 10.\r\n\r\nLäksy: sanaläksy kpl 1 ja s. 11 t. 5\r\nextra: t. 4"
+                },
+                {
+                    "RowNumber": 2,
+                    "Date": "2025-08-12",
+                    "Homework": "Tiedonhakua Walesista ja Skotlannista. Kuunneltiin kirjasta aukeama s. 6-7.\r\n\r\nLäksy: s. 9 t. 1\r\n(extra: t. 3)"
+                },
+                {
+                    "RowNumber": 1,
+                    "Date": "2025-08-11",
+                    "Homework": "Kesäkuulumiset ja bingo. Jaettiin kirjat ja vihkot. Tehtäväkirjasta s. 6-7 aakkosten kertailua sekä pariharkka.\r\n\r\nLäksy: tehtäväkirjasta s. 3 (my page)"
+                }
+            ],
+            "Diary": [
+                {
+                    "RowNumber": 44,
+                    "Date": "2025-12-08",
+                    "Lesson": "44",
+                    "Note": "",
+                    "TeacherId": 1743,
+                    "TeacherName": "Saarinen Elina",
+                    "TeacherCode": "SaariEl"
+                },
+                {
+                    "RowNumber": 43,
+                    "Date": "2025-12-03",
+                    "Lesson": "43",
+                    "Note": "",
+                    "TeacherId": 1743,
+                    "TeacherName": "Saarinen Elina",
+                    "TeacherCode": "SaariEl"
+                },
+                {
+                    "RowNumber": 42,
+                    "Date": "2025-12-02",
+                    "Lesson": "42",
+                    "Note": "",
+                    "TeacherId": 1743,
+                    "TeacherName": "Saarinen Elina",
+                    "TeacherCode": "SaariEl"
+                },
+                {
+                    "RowNumber": 41,
+                    "Date": "2025-12-01",
+                    "Lesson": "41",
+                    "Note": "",
+                    "TeacherId": 1914,
+                    "TeacherName": "Saalasti Merja",
+                    "TeacherCode": "SaalaMe"
+                },
+                {
+                    "RowNumber": 40,
+                    "Date": "2025-11-26",
+                    "Lesson": "40",
+                    "Note": "",
+                    "TeacherId": 1914,
+                    "TeacherName": "Saalasti Merja",
+                    "TeacherCode": "SaalaMe"
+                },
+                {
+                    "RowNumber": 39,
+                    "Date": "2025-11-25",
+                    "Lesson": "39",
+                    "Note": "",
+                    "TeacherId": 1743,
+                    "TeacherName": "Saarinen Elina",
+                    "TeacherCode": "SaariEl"
+                },
+                {
+                    "RowNumber": 38,
+                    "Date": "2025-11-24",
+                    "Lesson": "38",
+                    "Note": "",
+                    "TeacherId": 1743,
+                    "TeacherName": "Saarinen Elina",
+                    "TeacherCode": "SaariEl"
+                },
+                {
+                    "RowNumber": 37,
+                    "Date": "2025-11-18",
+                    "Lesson": "37",
+                    "Note": "",
+                    "TeacherId": 1743,
+                    "TeacherName": "Saarinen Elina",
+                    "TeacherCode": "SaariEl"
+                },
+                {
+                    "RowNumber": 36,
+                    "Date": "2025-11-17",
+                    "Lesson": "36",
+                    "Note": "",
+                    "TeacherId": 1914,
+                    "TeacherName": "Saalasti Merja",
+                    "TeacherCode": "SaalaMe"
+                },
+                {
+                    "RowNumber": 35,
+                    "Date": "2025-11-12",
+                    "Lesson": "35",
+                    "Note": "",
+                    "TeacherId": 1914,
+                    "TeacherName": "Saalasti Merja",
+                    "TeacherCode": "SaalaMe"
+                },
+                {
+                    "RowNumber": 34,
+                    "Date": "2025-11-11",
+                    "Lesson": "34",
+                    "Note": "",
+                    "TeacherId": 1743,
+                    "TeacherName": "Saarinen Elina",
+                    "TeacherCode": "SaariEl"
+                },
+                {
+                    "RowNumber": 33,
+                    "Date": "2025-11-10",
+                    "Lesson": "33",
+                    "Note": "",
+                    "TeacherId": 1914,
+                    "TeacherName": "Saalasti Merja",
+                    "TeacherCode": "SaalaMe"
+                },
+                {
+                    "RowNumber": 32,
+                    "Date": "2025-11-03",
+                    "Lesson": "32",
+                    "Note": "",
+                    "TeacherId": 1743,
+                    "TeacherName": "Saarinen Elina",
+                    "TeacherCode": "SaariEl"
+                },
+                {
+                    "RowNumber": 31,
+                    "Date": "2025-10-29",
+                    "Lesson": "31",
+                    "Note": "",
+                    "TeacherId": 1743,
+                    "TeacherName": "Saarinen Elina",
+                    "TeacherCode": "SaariEl"
+                },
+                {
+                    "RowNumber": 30,
+                    "Date": "2025-10-28",
+                    "Lesson": "30",
+                    "Note": "",
+                    "TeacherId": 1743,
+                    "TeacherName": "Saarinen Elina",
+                    "TeacherCode": "SaariEl"
+                },
+                {
+                    "RowNumber": 29,
+                    "Date": "2025-10-27",
+                    "Lesson": "29",
+                    "Note": "",
+                    "TeacherId": 1914,
+                    "TeacherName": "Saalasti Merja",
+                    "TeacherCode": "SaalaMe"
+                },
+                {
+                    "RowNumber": 28,
+                    "Date": "2025-10-15",
+                    "Lesson": "28",
+                    "Note": "",
+                    "TeacherId": 1914,
+                    "TeacherName": "Saalasti Merja",
+                    "TeacherCode": "SaalaMe"
+                },
+                {
+                    "RowNumber": 27,
+                    "Date": "2025-10-14",
+                    "Lesson": "27",
+                    "Note": "",
+                    "TeacherId": 1914,
+                    "TeacherName": "Saalasti Merja",
+                    "TeacherCode": "SaalaMe"
+                },
+                {
+                    "RowNumber": 26,
+                    "Date": "2025-10-13",
+                    "Lesson": "26",
+                    "Note": "",
+                    "TeacherId": 1743,
+                    "TeacherName": "Saarinen Elina",
+                    "TeacherCode": "SaariEl"
+                },
+                {
+                    "RowNumber": 25,
+                    "Date": "2025-10-08",
+                    "Lesson": "25",
+                    "Note": "",
+                    "TeacherId": 1743,
+                    "TeacherName": "Saarinen Elina",
+                    "TeacherCode": "SaariEl"
+                },
+                {
+                    "RowNumber": 24,
+                    "Date": "2025-10-07",
+                    "Lesson": "24",
+                    "Note": "",
+                    "TeacherId": 1743,
+                    "TeacherName": "Saarinen Elina",
+                    "TeacherCode": "SaariEl"
+                },
+                {
+                    "RowNumber": 23,
+                    "Date": "2025-10-06",
+                    "Lesson": "23",
+                    "Note": "",
+                    "TeacherId": 1743,
+                    "TeacherName": "Saarinen Elina",
+                    "TeacherCode": "SaariEl"
+                },
+                {
+                    "RowNumber": 22,
+                    "Date": "2025-10-01",
+                    "Lesson": "22",
+                    "Note": "",
+                    "TeacherId": 1914,
+                    "TeacherName": "Saalasti Merja",
+                    "TeacherCode": "SaalaMe"
+                },
+                {
+                    "RowNumber": 21,
+                    "Date": "2025-09-30",
+                    "Lesson": "21",
+                    "Note": "",
+                    "TeacherId": 1743,
+                    "TeacherName": "Saarinen Elina",
+                    "TeacherCode": "SaariEl"
+                },
+                {
+                    "RowNumber": 20,
+                    "Date": "2025-09-29",
+                    "Lesson": "20",
+                    "Note": "",
+                    "TeacherId": 1743,
+                    "TeacherName": "Saarinen Elina",
+                    "TeacherCode": "SaariEl"
+                },
+                {
+                    "RowNumber": 19,
+                    "Date": "2025-09-24",
+                    "Lesson": "19",
+                    "Note": "",
+                    "TeacherId": 1914,
+                    "TeacherName": "Saalasti Merja",
+                    "TeacherCode": "SaalaMe"
+                },
+                {
+                    "RowNumber": 18,
+                    "Date": "2025-09-22",
+                    "Lesson": "18",
+                    "Note": "",
+                    "TeacherId": 1914,
+                    "TeacherName": "Saalasti Merja",
+                    "TeacherCode": "SaalaMe"
+                },
+                {
+                    "RowNumber": 17,
+                    "Date": "2025-09-17",
+                    "Lesson": "17",
+                    "Note": "",
+                    "TeacherId": 1743,
+                    "TeacherName": "Saarinen Elina",
+                    "TeacherCode": "SaariEl"
+                },
+                {
+                    "RowNumber": 16,
+                    "Date": "2025-09-16",
+                    "Lesson": "16",
+                    "Note": "",
+                    "TeacherId": 1914,
+                    "TeacherName": "Saalasti Merja",
+                    "TeacherCode": "SaalaMe"
+                },
+                {
+                    "RowNumber": 15,
+                    "Date": "2025-09-15",
+                    "Lesson": "15",
+                    "Note": "",
+                    "TeacherId": 1743,
+                    "TeacherName": "Saarinen Elina",
+                    "TeacherCode": "SaariEl"
+                },
+                {
+                    "RowNumber": 14,
+                    "Date": "2025-09-10",
+                    "Lesson": "14",
+                    "Note": "",
+                    "TeacherId": 1914,
+                    "TeacherName": "Saalasti Merja",
+                    "TeacherCode": "SaalaMe"
+                },
+                {
+                    "RowNumber": 13,
+                    "Date": "2025-09-09",
+                    "Lesson": "13",
+                    "Note": "",
+                    "TeacherId": 1743,
+                    "TeacherName": "Saarinen Elina",
+                    "TeacherCode": "SaariEl"
+                },
+                {
+                    "RowNumber": 12,
+                    "Date": "2025-09-08",
+                    "Lesson": "12",
+                    "Note": "",
+                    "TeacherId": 1743,
+                    "TeacherName": "Saarinen Elina",
+                    "TeacherCode": "SaariEl"
+                },
+                {
+                    "RowNumber": 11,
+                    "Date": "2025-09-03",
+                    "Lesson": "11",
+                    "Note": "",
+                    "TeacherId": 1914,
+                    "TeacherName": "Saalasti Merja",
+                    "TeacherCode": "SaalaMe"
+                },
+                {
+                    "RowNumber": 10,
+                    "Date": "2025-09-02",
+                    "Lesson": "10",
+                    "Note": "",
+                    "TeacherId": 1743,
+                    "TeacherName": "Saarinen Elina",
+                    "TeacherCode": "SaariEl"
+                },
+                {
+                    "RowNumber": 9,
+                    "Date": "2025-09-01",
+                    "Lesson": "9",
+                    "Note": "",
+                    "TeacherId": 1914,
+                    "TeacherName": "Saalasti Merja",
+                    "TeacherCode": "SaalaMe"
+                },
+                {
+                    "RowNumber": 8,
+                    "Date": "2025-08-26",
+                    "Lesson": "8",
+                    "Note": "",
+                    "TeacherId": 1914,
+                    "TeacherName": "Saalasti Merja",
+                    "TeacherCode": "SaalaMe"
+                },
+                {
+                    "RowNumber": 7,
+                    "Date": "2025-08-25",
+                    "Lesson": "7",
+                    "Note": "",
+                    "TeacherId": 1743,
+                    "TeacherName": "Saarinen Elina",
+                    "TeacherCode": "SaariEl"
+                },
+                {
+                    "RowNumber": 6,
+                    "Date": "2025-08-20",
+                    "Lesson": "6",
+                    "Note": "",
+                    "TeacherId": 1914,
+                    "TeacherName": "Saalasti Merja",
+                    "TeacherCode": "SaalaMe"
+                },
+                {
+                    "RowNumber": 5,
+                    "Date": "2025-08-19",
+                    "Lesson": "5",
+                    "Note": "",
+                    "TeacherId": 1743,
+                    "TeacherName": "Saarinen Elina",
+                    "TeacherCode": "SaariEl"
+                },
+                {
+                    "RowNumber": 4,
+                    "Date": "2025-08-18",
+                    "Lesson": "4",
+                    "Note": "",
+                    "TeacherId": 1914,
+                    "TeacherName": "Saalasti Merja",
+                    "TeacherCode": "SaalaMe"
+                },
+                {
+                    "RowNumber": 3,
+                    "Date": "2025-08-13",
+                    "Lesson": "3",
+                    "Note": "",
+                    "TeacherId": 1743,
+                    "TeacherName": "Saarinen Elina",
+                    "TeacherCode": "SaariEl"
+                },
+                {
+                    "RowNumber": 2,
+                    "Date": "2025-08-12",
+                    "Lesson": "2",
+                    "Note": "",
+                    "TeacherId": 1743,
+                    "TeacherName": "Saarinen Elina",
+                    "TeacherCode": "SaariEl"
+                },
+                {
+                    "RowNumber": 1,
+                    "Date": "2025-08-11",
+                    "Lesson": "1",
+                    "Note": "",
+                    "TeacherId": 1743,
+                    "TeacherName": "Saarinen Elina",
+                    "TeacherCode": "SaariEl"
+                }
+            ],
+            "Exams": [
+                {
+                    "Id": 580889,
+                    "Date": "2025-09-01",
+                    "Name": "sanatesti kpl 1",
+                    "Info": "",
+                    "Grade": "7",
+                    "VerbalGrade": ""
+                },
+                {
+                    "Id": 584285,
+                    "Date": "2025-09-24",
+                    "Name": "Koe kpl 1-3",
+                    "Info": "Harjoittele seuraavat asiat:\r\nTB - tekstikirja:  kuvasanastot kpl 1-3 \r\n•\tesineitä: p. 8 \r\n•\tverbejä: p. 14 \r\n•\tmusiikkisanoja: p. 20 \r\n-tekstit kpl 1-3: Varmista, että ymmärrät ainakin 1. sivun asiat ja osaat käyttää niiden sanoja ja virkkeitä.\r\n•\tThink Pink! p.9-11\r\n•\tWelcome on board! p.15-17\r\n•\tScotland rocks p.21\r\n\r\nWB – tehtäväkirja:\r\nKappaletekstien virkkeet: p.15 (Think Pink!), p.25 (Welcome on board!), p.33, ex.12 (Scotland rocks)\r\nomistaa ja olla-verbit (be and have): p.16\r\nkestopreesens: p.26 (myönteinen ja kielteinen) + p.36 (kysymykset)\r\nHere’s more kertaustehtäviä: p.44-46 ja kertausmonisteet.",
+                    "Grade": "8-",
+                    "VerbalGrade": ""
+                },
+                {
+                    "Id": 593595,
+                    "Date": "2025-10-13",
+                    "Name": "Sanatesti kpl 4",
+                    "Info": "",
+                    "Grade": "8-",
+                    "VerbalGrade": ""
+                },
+                {
+                    "Id": 597672,
+                    "Date": "2025-11-10",
+                    "Name": "sanatesti kpl 5",
+                    "Info": "",
+                    "Grade": "6+",
+                    "VerbalGrade": ""
+                },
+                {
+                    "Id": 596402,
+                    "Date": "2025-11-18",
+                    "Name": "Unit 2 (kpl 4-6)",
+                    "Info": "Harjoittele kokeeseen seuraavat asiat:\r\nTextbook:\r\n•\tkpl 4 kuvasanasto: urheilusanat s. 32\r\n•\tkpl 5 kuvasanasto: sairaussanat s. 38\r\n•\tkpl 6 kuvasanasto: luontosanat s. 44\r\nWorkbook:\r\n•\tyleispreesens s. 54\r\n•\tkysymyssanat ja kysymysten muodostaminen s. 64\r\n•\tThere is\/There are-rakenne s. 74\r\nLue läpi kappaleet 4-6 ja varmista, että osaat ainakin 1.sivun asiat suomeksi.\r\nVoit kerrata kokeeseen tekemällä kirjan kertaustehtäviä s. 82-84, open antamia monisteita tai oman luokan Teamssista löytyviä pelejä.",
+                    "Grade": "6",
+                    "VerbalGrade": ""
+                },
+                {
+                    "Id": 602684,
+                    "Date": "2025-12-02",
+                    "Name": "Tuntityöskentelyn arviointi syyslukukaudella",
+                    "Info": "Tuntityöskentelyn arviointi:\r\n-työskentely-ja vuorovaikutustaidot\r\n-kotitehtävistä ja opiskeluvälineistä huolehtiminen\r\n-tuntiharjoituksiin osallistuminen\r\n-vastuunottaminen omasta opiskelusta\r\n-parhaansa yrittäminen\r\n-pari-ja ryhmätyöskentely"
+                }
+            ]
+        },
+        {
+            "Id": 1096541,
+            "CourseId": 66176,
+            "CourseName": "ENA1 5 lk syksy",
+            "CourseCode": "ENA15s",
+            "Name": "ENA1.A",
+            "Caption": "ENA1.A ENA15s",
+            "StartDate": "2025-08-06",
+            "EndDate": "2025-12-19",
+            "Committed": false,
+            "Teachers": [
+                {
+                    "TeacherId": 1914,
+                    "TeacherName": "Saalasti Merja",
+                    "TeacherCode": "SaalaMe"
+                },
+                {
+                    "TeacherId": 1743,
+                    "TeacherName": "Saarinen Elina",
+                    "TeacherCode": "SaariEl"
+                }
+            ],
+            "Homework": [],
+            "Diary": [],
+            "Exams": []
+        },
+        {
+            "Id": 1096549,
+            "CourseId": 66195,
+            "CourseName": "HI5 lk syksy",
+            "CourseCode": "HI5s",
+            "Name": "HI",
+            "Caption": "HI HI5s",
+            "StartDate": "2025-08-06",
+            "EndDate": "2025-12-19",
+            "Committed": false,
+            "Teachers": [
+                {
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "TeacherId": 7711,
+                    "TeacherName": "Wallin Simo",
+                    "TeacherCode": "WalliSi"
+                },
+                {
+                    "TeacherId": 9456,
+                    "TeacherName": "Suomalainen Johanna",
+                    "TeacherCode": "SuomaJo"
+                }
+            ],
+            "Homework": [
+                {
+                    "RowNumber": 6,
+                    "Date": "2025-11-06",
+                    "Homework": "Lukuläksy kpl 11 ja tunnilla annettujen sanojen selitys vihkoon."
+                },
+                {
+                    "RowNumber": 5,
+                    "Date": "2025-10-30",
+                    "Homework": "lukuläksy kpl 10 ja teht. 1-2"
+                },
+                {
+                    "RowNumber": 4,
+                    "Date": "2025-10-16",
+                    "Homework": "Lukuläksy kpl 9 ja vihkotehtävä."
+                },
+                {
+                    "RowNumber": 3,
+                    "Date": "2025-10-02",
+                    "Homework": "Lukuläksy kpl 7 ja teht.1-2"
+                },
+                {
+                    "RowNumber": 2,
+                    "Date": "2025-08-28",
+                    "Homework": "Lukuläksy kpl 4 ja teht. 1-2"
+                },
+                {
+                    "RowNumber": 1,
+                    "Date": "2025-08-21",
+                    "Homework": "Lukuläksy kpl 3 ja ajatuskartta (moniste)"
+                }
+            ],
+            "Diary": [
+                {
+                    "RowNumber": 6,
+                    "Date": "2025-11-06",
+                    "Lesson": "6",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 5,
+                    "Date": "2025-10-30",
+                    "Lesson": "5",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 4,
+                    "Date": "2025-10-16",
+                    "Lesson": "4",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 3,
+                    "Date": "2025-10-02",
+                    "Lesson": "3",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 2,
+                    "Date": "2025-08-28",
+                    "Lesson": "2",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 1,
+                    "Date": "2025-08-21",
+                    "Lesson": "1",
+                    "Note": "Kivikausi",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                }
+            ],
+            "Exams": [
+                {
+                    "Id": 596912,
+                    "Date": "2025-11-20",
+                    "Name": "Historian koe",
+                    "Info": "Ritari- kirjasta jakso 2. varhaiset korkeakulttuurit kappaleet 6-11 sekä vihkomuistiinpanot",
+                    "Grade": "6+",
+                    "VerbalGrade": ""
+                },
+                {
+                    "Id": 604748,
+                    "Date": "2025-12-04",
+                    "Name": "Historian aineistotesti kpl 12",
+                    "Info": ""
+                },
+                {
+                    "Id": 604507,
+                    "Date": "2025-12-04",
+                    "Name": "Vihko- ja tuntityöskentely",
+                    "Info": ""
+                }
+            ]
+        },
+        {
+            "Id": 1096552,
+            "CourseId": 66198,
+            "CourseName": "KU 5 lk syksy",
+            "CourseCode": "KU5s",
+            "Name": "KU",
+            "Caption": "KU KU5s",
+            "StartDate": "2025-08-06",
+            "EndDate": "2025-12-19",
+            "Committed": false,
+            "Teachers": [
+                {
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "TeacherId": 7711,
+                    "TeacherName": "Wallin Simo",
+                    "TeacherCode": "WalliSi"
+                }
+            ],
+            "Homework": [],
+            "Diary": [],
+            "Exams": [
+                {
+                    "Id": 588189,
+                    "Date": "2025-09-29",
+                    "Name": "",
+                    "Info": "Kasvokuva"
+                },
+                {
+                    "Id": 592938,
+                    "Date": "2025-10-15",
+                    "Name": "",
+                    "Info": "Savityö, astia makkaratekniikalla"
+                },
+                {
+                    "Id": 597667,
+                    "Date": "2025-11-10",
+                    "Name": "",
+                    "Info": "Maisemamaalaus"
+                }
+            ]
+        },
+        {
+            "Id": 1096555,
+            "CourseId": 64237,
+            "CourseName": "Kuvataiteen syventävä kurssi",
+            "CourseCode": "KUVx 5 lk",
+            "Name": "KUVx",
+            "Caption": "KUVx KUVx 5 lk",
+            "StartDate": "2025-08-06",
+            "EndDate": "2026-05-30",
+            "Committed": false,
+            "Teachers": [
+                {
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                }
+            ],
+            "Homework": [],
+            "Diary": [],
+            "Exams": []
+        },
+        {
+            "Id": 1097122,
+            "CourseId": 66201,
+            "CourseName": "KÄ 5 lk syksy",
+            "CourseCode": "KÄ5s",
+            "Name": "KÄ",
+            "Caption": "KÄ KÄ5s",
+            "StartDate": "2025-08-06",
+            "EndDate": "2025-12-19",
+            "Committed": false,
+            "Teachers": [
+                {
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                }
+            ],
+            "Homework": [],
+            "Diary": [],
+            "Exams": []
+        },
+        {
+            "Id": 1096558,
+            "CourseId": 66199,
+            "CourseName": "KÄS 5 lk syksy",
+            "CourseCode": "KÄS5s",
+            "Name": "KÄS",
+            "Caption": "KÄS KÄS5s",
+            "StartDate": "2025-08-06",
+            "EndDate": "2025-12-19",
+            "Committed": false,
+            "Teachers": [
+                {
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "TeacherId": 7711,
+                    "TeacherName": "Wallin Simo",
+                    "TeacherCode": "WalliSi"
+                },
+                {
+                    "TeacherId": 697,
+                    "TeacherName": "Vehkaperä Antti",
+                    "TeacherCode": "VehkaAn"
+                }
+            ],
+            "Homework": [],
+            "Diary": [],
+            "Exams": [
+                {
+                    "Id": 599382,
+                    "Date": "2025-11-17",
+                    "Name": "Elektroniikkatyö: Pujottelupeli",
+                    "Info": ""
+                },
+                {
+                    "Id": 599872,
+                    "Date": "2025-11-17",
+                    "Name": "Ompelutyö",
+                    "Info": "Ompelutyö: yöhousut"
+                }
+            ]
+        },
+        {
+            "Id": 1096561,
+            "CourseId": 66200,
+            "CourseName": "LI 5 lk syksy",
+            "CourseCode": "LI5s",
+            "Name": "LI",
+            "Caption": "LI LI5s",
+            "StartDate": "2025-08-06",
+            "EndDate": "2025-12-19",
+            "Committed": false,
+            "Teachers": [
+                {
+                    "TeacherId": 4910,
+                    "TeacherName": "Turpeinen Heikki",
+                    "TeacherCode": "TurpeHe"
+                },
+                {
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "TeacherId": 7711,
+                    "TeacherName": "Wallin Simo",
+                    "TeacherCode": "WalliSi"
+                }
+            ],
+            "Homework": [],
+            "Diary": [],
+            "Exams": []
+        },
+        {
+            "Id": 1096564,
+            "CourseId": 66188,
+            "CourseName": "MA 5 lk syksy",
+            "CourseCode": "MA5s",
+            "Name": "MA",
+            "Caption": "MA MA5s",
+            "StartDate": "2025-08-06",
+            "EndDate": "2025-12-19",
+            "Committed": false,
+            "Teachers": [
+                {
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "TeacherId": 7711,
+                    "TeacherName": "Wallin Simo",
+                    "TeacherCode": "WalliSi"
+                },
+                {
+                    "TeacherId": 9456,
+                    "TeacherName": "Suomalainen Johanna",
+                    "TeacherCode": "SuomaJo"
+                },
+                {
+                    "TeacherId": 10298,
+                    "TeacherName": "Kuoppala Johanna",
+                    "TeacherCode": "KuoppJo"
+                }
+            ],
+            "Homework": [
+                {
+                    "RowNumber": 35,
+                    "Date": "2025-12-04",
+                    "Homework": "s. 195"
+                },
+                {
+                    "RowNumber": 34,
+                    "Date": "2025-12-02",
+                    "Homework": "mökki 43 ja aukeama valmiiksi"
+                },
+                {
+                    "RowNumber": 33,
+                    "Date": "2025-11-27",
+                    "Homework": "Aukeama 41 valmiiksi ja mökki 41"
+                },
+                {
+                    "RowNumber": 32,
+                    "Date": "2025-11-26",
+                    "Homework": "mökki 40"
+                },
+                {
+                    "RowNumber": 31,
+                    "Date": "2025-11-25",
+                    "Homework": "mökki 39"
+                },
+                {
+                    "RowNumber": 30,
+                    "Date": "2025-11-20",
+                    "Homework": "Kertausmoniste 38"
+                },
+                {
+                    "RowNumber": 29,
+                    "Date": "2025-11-18",
+                    "Homework": "s. 162-163"
+                },
+                {
+                    "RowNumber": 28,
+                    "Date": "2025-11-13",
+                    "Homework": "mökki 37 ja s. 159 valmiiksi"
+                },
+                {
+                    "RowNumber": 27,
+                    "Date": "2025-11-11",
+                    "Homework": "35 mökki ja aukeama valmiiksi"
+                },
+                {
+                    "RowNumber": 26,
+                    "Date": "2025-11-07",
+                    "Homework": "mökki 34"
+                },
+                {
+                    "RowNumber": 25,
+                    "Date": "2025-11-03",
+                    "Homework": "Aukeama 33 valmiiksi"
+                },
+                {
+                    "RowNumber": 24,
+                    "Date": "2025-10-28",
+                    "Homework": "mökki 31"
+                },
+                {
+                    "RowNumber": 23,
+                    "Date": "2025-10-16",
+                    "Homework": "s. 126-127 ja mökki 29"
+                },
+                {
+                    "RowNumber": 22,
+                    "Date": "2025-10-14",
+                    "Homework": "mökki 27"
+                },
+                {
+                    "RowNumber": 21,
+                    "Date": "2025-10-08",
+                    "Homework": "mökki 25"
+                },
+                {
+                    "RowNumber": 20,
+                    "Date": "2025-10-07",
+                    "Homework": "Mökki 24 ja aukeama 24 valmiiksi"
+                },
+                {
+                    "RowNumber": 19,
+                    "Date": "2025-10-01",
+                    "Homework": "mökki 22"
+                },
+                {
+                    "RowNumber": 18,
+                    "Date": "2025-09-30",
+                    "Homework": "mökki 21"
+                },
+                {
+                    "RowNumber": 17,
+                    "Date": "2025-09-24",
+                    "Homework": "Mökki 20 ja aukeama valmiiksi."
+                },
+                {
+                    "RowNumber": 16,
+                    "Date": "2025-09-19",
+                    "Homework": "mökki 19"
+                },
+                {
+                    "RowNumber": 15,
+                    "Date": "2025-09-18",
+                    "Homework": "mökki 18 ja aukema 18 valmiiksi"
+                },
+                {
+                    "RowNumber": 14,
+                    "Date": "2025-09-17",
+                    "Homework": "s. 75"
+                },
+                {
+                    "RowNumber": 13,
+                    "Date": "2025-09-11",
+                    "Homework": "Ei läksyä."
+                },
+                {
+                    "RowNumber": 12,
+                    "Date": "2025-09-10",
+                    "Homework": "mökki 14 ja aukeama s. 62-63"
+                },
+                {
+                    "RowNumber": 11,
+                    "Date": "2025-09-09",
+                    "Homework": "mökki 13 ja aukeama s. 58-59 valmiiksi"
+                },
+                {
+                    "RowNumber": 9,
+                    "Date": "2025-09-03",
+                    "Homework": "mökki 11 ja niille jotka ovat sen jo tehneet katsastusaukeamalta henkilökohtainen läksy (merkitty kirjaan).\r\nOppilaat ovat saaneet harjoittelumonisteita koetta varten."
+                },
+                {
+                    "RowNumber": 8,
+                    "Date": "2025-08-28",
+                    "Homework": "s. 42-43 ja mökki 10"
+                },
+                {
+                    "RowNumber": 7,
+                    "Date": "2025-08-26",
+                    "Homework": "s. 38-39"
+                },
+                {
+                    "RowNumber": 6,
+                    "Date": "2025-08-22",
+                    "Homework": "Ei läksyä"
+                },
+                {
+                    "RowNumber": 5,
+                    "Date": "2025-08-20",
+                    "Homework": "mökki 8"
+                },
+                {
+                    "RowNumber": 4,
+                    "Date": "2025-08-19",
+                    "Homework": "mökki 7 ja s. 30-31"
+                },
+                {
+                    "RowNumber": 3,
+                    "Date": "2025-08-15",
+                    "Homework": "s. 27"
+                },
+                {
+                    "RowNumber": 2,
+                    "Date": "2025-08-14",
+                    "Homework": "mökki 5"
+                },
+                {
+                    "RowNumber": 1,
+                    "Date": "2025-08-12",
+                    "Homework": "mökki 3"
+                }
+            ],
+            "Diary": [
+                {
+                    "RowNumber": 35,
+                    "Date": "2025-12-04",
+                    "Lesson": "35",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 34,
+                    "Date": "2025-12-02",
+                    "Lesson": "34",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 33,
+                    "Date": "2025-11-27",
+                    "Lesson": "33",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 32,
+                    "Date": "2025-11-26",
+                    "Lesson": "32",
+                    "Note": "Aukeama 40",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 31,
+                    "Date": "2025-11-25",
+                    "Lesson": "31",
+                    "Note": "Aukeama 39",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 30,
+                    "Date": "2025-11-20",
+                    "Lesson": "30",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 29,
+                    "Date": "2025-11-18",
+                    "Lesson": "29",
+                    "Note": "Katsastusaukeama",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 28,
+                    "Date": "2025-11-13",
+                    "Lesson": "28",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 27,
+                    "Date": "2025-11-11",
+                    "Lesson": "27",
+                    "Note": "Suunnikkaan pinta-alan laskeminen",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 26,
+                    "Date": "2025-11-07",
+                    "Lesson": "26",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 25,
+                    "Date": "2025-11-03",
+                    "Lesson": "25",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 24,
+                    "Date": "2025-10-28",
+                    "Lesson": "24",
+                    "Note": "Kulman mittaamisen kertaaminen ja kulman piirtäminen.\r\nAukeama 30 valmiiksi ja aukeaman 31 aloittaminen.",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 23,
+                    "Date": "2025-10-16",
+                    "Lesson": "23",
+                    "Note": "Aukeama 29, kulmat",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 22,
+                    "Date": "2025-10-14",
+                    "Lesson": "22",
+                    "Note": "Aukeama 27",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 21,
+                    "Date": "2025-10-08",
+                    "Lesson": "21",
+                    "Note": "Aukeama 25",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 20,
+                    "Date": "2025-10-07",
+                    "Lesson": "20",
+                    "Note": "Jaetaan jakokulmassa, jakojäännös",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 19,
+                    "Date": "2025-10-01",
+                    "Lesson": "19",
+                    "Note": "Aukeama 22",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 18,
+                    "Date": "2025-09-30",
+                    "Lesson": "18",
+                    "Note": "Aukeama 21",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 17,
+                    "Date": "2025-09-24",
+                    "Lesson": "17",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 16,
+                    "Date": "2025-09-19",
+                    "Lesson": "16",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 15,
+                    "Date": "2025-09-18",
+                    "Lesson": "15",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 14,
+                    "Date": "2025-09-17",
+                    "Lesson": "14",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 13,
+                    "Date": "2025-09-11",
+                    "Lesson": "13",
+                    "Note": "Kertaustunti",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 12,
+                    "Date": "2025-09-10",
+                    "Lesson": "12",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 11,
+                    "Date": "2025-09-09",
+                    "Lesson": "11",
+                    "Note": "s. 58-59",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 10,
+                    "Date": "2025-09-05",
+                    "Lesson": "10",
+                    "Note": "koe",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 9,
+                    "Date": "2025-09-03",
+                    "Lesson": "9",
+                    "Note": "Harjoitellaan sivu",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 8,
+                    "Date": "2025-08-28",
+                    "Lesson": "8",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 7,
+                    "Date": "2025-08-26",
+                    "Lesson": "7",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 6,
+                    "Date": "2025-08-22",
+                    "Lesson": "6",
+                    "Note": "Ville- tehtäviä",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 5,
+                    "Date": "2025-08-20",
+                    "Lesson": "5",
+                    "Note": "Aukeama 8",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 4,
+                    "Date": "2025-08-19",
+                    "Lesson": "4",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 3,
+                    "Date": "2025-08-15",
+                    "Lesson": "3",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 2,
+                    "Date": "2025-08-14",
+                    "Lesson": "2",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 1,
+                    "Date": "2025-08-12",
+                    "Lesson": "1",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                }
+            ],
+            "Exams": [
+                {
+                    "Id": 579928,
+                    "Date": "2025-09-05",
+                    "Name": "Matematiikan koe,  jakso 1: Yhteen- ja vähennyslaskut",
+                    "Info": "Milli 5 s. 6- 51",
+                    "Grade": "6",
+                    "VerbalGrade": "Koetuki"
+                },
+                {
+                    "Id": 590697,
+                    "Date": "2025-10-10",
+                    "Name": "",
+                    "Info": "Matematiikan koe , jakso 2 kerto- ja jakolaskut\r\ns. 58-11",
+                    "Grade": "5,5",
+                    "VerbalGrade": ""
+                },
+                {
+                    "Id": 598816,
+                    "Date": "2025-11-24",
+                    "Name": "Matematiikan koe",
+                    "Info": "Jakso geometria s, 118-165",
+                    "Grade": "7-",
+                    "VerbalGrade": "Koetuki: tehtävänannot luettu yksitellen tarkasti erityisopettajan kanssa"
+                },
+                {
+                    "Id": 602188,
+                    "Date": "2025-12-08",
+                    "Caption": "Matematiikan koe",
+                    "Topic": "Tilastot ja todennäköisyys, kpl 39-45"
+                }
+            ]
+        },
+        {
+            "Id": 1096569,
+            "CourseId": 66197,
+            "CourseName": "MU 5 lk syksy",
+            "CourseCode": "MU5s",
+            "Name": "MU",
+            "Caption": "MU MU5s",
+            "StartDate": "2025-08-06",
+            "EndDate": "2025-12-19",
+            "Committed": false,
+            "Teachers": [
+                {
+                    "TeacherId": 8404,
+                    "TeacherName": "Korpela Hilla",
+                    "TeacherCode": "KorpeHi"
+                },
+                {
+                    "TeacherId": 9085,
+                    "TeacherName": "Parkkila Henna-Mari",
+                    "TeacherCode": "ParkkHe"
+                }
+            ],
+            "Homework": [],
+            "Diary": [],
+            "Exams": []
+        },
+        {
+            "Id": 1096572,
+            "CourseId": 66190,
+            "CourseName": "UE 5 lk syksy",
+            "CourseCode": "UE5s",
+            "Name": "UE",
+            "Caption": "UE UE5s",
+            "StartDate": "2025-08-06",
+            "EndDate": "2025-12-19",
+            "Committed": false,
+            "Teachers": [
+                {
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "TeacherId": 7711,
+                    "TeacherName": "Wallin Simo",
+                    "TeacherCode": "WalliSi"
+                }
+            ],
+            "Homework": [
+                {
+                    "RowNumber": 12,
+                    "Date": "2025-11-26",
+                    "Homework": "Lukuläksy kpl 12 ja tehtävät diasta, Teams-> 5ab->   uskonto -> Lutherin uudistukset"
+                },
+                {
+                    "RowNumber": 11,
+                    "Date": "2025-11-19",
+                    "Homework": "Lukuläksy kpl 11 ja teht. 1-2"
+                },
+                {
+                    "RowNumber": 10,
+                    "Date": "2025-10-29",
+                    "Homework": "Tehtävä 3. s. 41"
+                },
+                {
+                    "RowNumber": 9,
+                    "Date": "2025-10-08",
+                    "Homework": "Lukuläksy kpl 8 ja teht. 2,\r\nTunnilla vihkoon tehdyt tehtävät tulee olla valmiina,"
+                },
+                {
+                    "RowNumber": 8,
+                    "Date": "2025-10-01",
+                    "Homework": "Lukuläksy kpl 7 ja teht. 1-2"
+                },
+                {
+                    "RowNumber": 7,
+                    "Date": "2025-09-24",
+                    "Homework": "Lukuläksy kpl 6 ja moniste valmiiksi."
+                },
+                {
+                    "RowNumber": 6,
+                    "Date": "2025-09-18",
+                    "Homework": "Lue kpl 5 ja teht. 1-2"
+                },
+                {
+                    "RowNumber": 5,
+                    "Date": "2025-09-17",
+                    "Homework": "Lukuläksy kpl 5 ja moniste"
+                },
+                {
+                    "RowNumber": 4,
+                    "Date": "2025-09-10",
+                    "Homework": "Lukuläksy kpl 4"
+                },
+                {
+                    "RowNumber": 3,
+                    "Date": "2025-09-03",
+                    "Homework": "Lukuläksy kpl 3 ja moniste"
+                },
+                {
+                    "RowNumber": 2,
+                    "Date": "2025-08-20",
+                    "Homework": "Lukuläksy kpl 2"
+                },
+                {
+                    "RowNumber": 1,
+                    "Date": "2025-08-13",
+                    "Homework": "Lukuläksy kpl 1"
+                }
+            ],
+            "Diary": [
+                {
+                    "RowNumber": 12,
+                    "Date": "2025-11-26",
+                    "Lesson": "12",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 11,
+                    "Date": "2025-11-19",
+                    "Lesson": "11",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 10,
+                    "Date": "2025-10-29",
+                    "Lesson": "10",
+                    "Note": "Luostarit",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 9,
+                    "Date": "2025-10-08",
+                    "Lesson": "9",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 8,
+                    "Date": "2025-10-01",
+                    "Lesson": "8",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 7,
+                    "Date": "2025-09-24",
+                    "Lesson": "7",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 6,
+                    "Date": "2025-09-18",
+                    "Lesson": "6",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 5,
+                    "Date": "2025-09-17",
+                    "Lesson": "5",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 4,
+                    "Date": "2025-09-10",
+                    "Lesson": "4",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 3,
+                    "Date": "2025-09-03",
+                    "Lesson": "3",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 2,
+                    "Date": "2025-08-20",
+                    "Lesson": "2",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 1,
+                    "Date": "2025-08-13",
+                    "Lesson": "1",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                }
+            ],
+            "Exams": [
+                {
+                    "Id": 593463,
+                    "Date": "2025-11-05",
+                    "Name": "Uskonnon koe",
+                    "Info": "Aarre- kirjasta jakso 2. Kristinuskon alku s. 15-36 sekä vihon muistiinpanot.",
+                    "Grade": "5,5",
+                    "VerbalGrade": "Suullinen koetuki"
+                },
+                {
+                    "Id": 604426,
+                    "Date": "2025-12-03",
+                    "Name": "Aineistotesti: Aarre kpl 13",
+                    "Info": "Tunnilla tehty kpl 13 koskeva Forms-testi. Oppilailla ollut kirjan teksti esillä vastatessa."
+                },
+                {
+                    "Id": 604141,
+                    "Date": "2025-12-03",
+                    "Name": "Vihko- ja tuntityöskentely",
+                    "Info": ""
+                }
+            ]
+        },
+        {
+            "Id": 1096575,
+            "CourseId": 66196,
+            "CourseName": "YH 5 lk syksy",
+            "CourseCode": "YH5s",
+            "Name": "YH",
+            "Caption": "YH YH5s",
+            "StartDate": "2025-08-06",
+            "EndDate": "2025-12-19",
+            "Committed": false,
+            "Teachers": [
+                {
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "TeacherId": 7711,
+                    "TeacherName": "Wallin Simo",
+                    "TeacherCode": "WalliSi"
+                },
+                {
+                    "TeacherId": 9456,
+                    "TeacherName": "Suomalainen Johanna",
+                    "TeacherCode": "SuomaJo"
+                }
+            ],
+            "Homework": [
+                {
+                    "RowNumber": 9,
+                    "Date": "2025-12-04",
+                    "Homework": "Lukuläksy kpl 10 ja teht. 1-2"
+                },
+                {
+                    "RowNumber": 8,
+                    "Date": "2025-11-27",
+                    "Homework": "Lukuläksy kpl 9 ja s. 59 teht. 1-2"
+                },
+                {
+                    "RowNumber": 7,
+                    "Date": "2025-11-20",
+                    "Homework": "Lukuläksy kpl 8 ja teht.1a,b,c s.56"
+                },
+                {
+                    "RowNumber": 5,
+                    "Date": "2025-09-25",
+                    "Homework": "Lukuläksy kpl 7 ja teht. 1-3"
+                },
+                {
+                    "RowNumber": 4,
+                    "Date": "2025-09-04",
+                    "Homework": "Lukuläksy kpl 4 ja t. 1"
+                },
+                {
+                    "RowNumber": 3,
+                    "Date": "2025-09-04",
+                    "Homework": "Lukuläksy kpl 4 ja teht. 1"
+                },
+                {
+                    "RowNumber": 2,
+                    "Date": "2025-08-28",
+                    "Homework": "Lukuläksy kpl 3 ja ajatuskartta (vihossa)"
+                },
+                {
+                    "RowNumber": 1,
+                    "Date": "2025-08-21",
+                    "Homework": "Lukuläksy kpl 2 ja teht. 1-3"
+                }
+            ],
+            "Diary": [
+                {
+                    "RowNumber": 9,
+                    "Date": "2025-12-04",
+                    "Lesson": "9",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 8,
+                    "Date": "2025-11-27",
+                    "Lesson": "8",
+                    "Note": "Mainioita mainoksia s. 61 teksti ja teht. 3-4",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 7,
+                    "Date": "2025-11-20",
+                    "Lesson": "7",
+                    "Note": "Rahan käyttö",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 6,
+                    "Date": "2025-10-16",
+                    "Lesson": "6",
+                    "Note": "Parityönä Puolue-esittely",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 5,
+                    "Date": "2025-09-25",
+                    "Lesson": "5",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 4,
+                    "Date": "2025-09-04",
+                    "Lesson": "4",
+                    "Note": "",
+                    "TeacherId": 7711,
+                    "TeacherName": "Wallin Simo",
+                    "TeacherCode": "WalliSi"
+                },
+                {
+                    "RowNumber": 3,
+                    "Date": "2025-09-04",
+                    "Lesson": "3",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 2,
+                    "Date": "2025-08-28",
+                    "Lesson": "2",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 1,
+                    "Date": "2025-08-21",
+                    "Lesson": "1",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                }
+            ],
+            "Exams": [
+                {
+                    "Id": 588089,
+                    "Date": "2025-10-30",
+                    "Name": "Yhteiskuntaopin koe, jakso 2 Päätetään yhdessä",
+                    "Info": "Koealue  Forum  jakso 2. s. 26-48 sekä vihon muistiinpanot",
+                    "Grade": "8+",
+                    "VerbalGrade": "Koetuki"
+                },
+                {
+                    "Id": 599218,
+                    "Date": "2025-11-07",
+                    "Name": "Puolue-esittely parityö",
+                    "Info": ""
+                }
+            ]
+        },
+        {
+            "Id": 1096578,
+            "CourseId": 66189,
+            "CourseName": "YM 5 lk syksy",
+            "CourseCode": "YM5s",
+            "Name": "YM",
+            "Caption": "YM YM5s",
+            "StartDate": "2025-08-06",
+            "EndDate": "2025-12-19",
+            "Committed": false,
+            "Teachers": [
+                {
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "TeacherId": 7711,
+                    "TeacherName": "Wallin Simo",
+                    "TeacherCode": "WalliSi"
+                },
+                {
+                    "TeacherId": 9456,
+                    "TeacherName": "Suomalainen Johanna",
+                    "TeacherCode": "SuomaJo"
+                },
+                {
+                    "TeacherId": 697,
+                    "TeacherName": "Vehkaperä Antti",
+                    "TeacherCode": "VehkaAn"
+                }
+            ],
+            "Homework": [
+                {
+                    "RowNumber": 19,
+                    "Date": "2025-11-18",
+                    "Homework": "Lukuläksynä kpl 15 -Opettele maanosat ja ilmansuunnat.\r\nTehtävät 1-3 valmiiksi."
+                },
+                {
+                    "RowNumber": 18,
+                    "Date": "2025-11-11",
+                    "Homework": "Lukuläksynä kpl 15 ja ilmansuuntien sekä maanosien nimitysten kertaus"
+                },
+                {
+                    "RowNumber": 17,
+                    "Date": "2025-11-07",
+                    "Homework": "Lukuläksy kpl 14 ja teht. 1-3"
+                },
+                {
+                    "RowNumber": 16,
+                    "Date": "2025-10-29",
+                    "Homework": "Lukuläksy kpl 13 ja vihkotyö"
+                },
+                {
+                    "RowNumber": 15,
+                    "Date": "2025-10-28",
+                    "Homework": "Pisara- kirjasta lukuläksy kpl 12, kuvat  ja kuvatekstit tärkeitä.\r\nteht. 1-3"
+                },
+                {
+                    "RowNumber": 13,
+                    "Date": "2025-10-08",
+                    "Homework": "Kokeeseen harjoittelua , kappaleet 5-10"
+                },
+                {
+                    "RowNumber": 12,
+                    "Date": "2025-09-30",
+                    "Homework": "Lukuläksy kpl 10 sekä kappaleiden 5-9 tummennettujen pääkäsitteiden kertaus."
+                },
+                {
+                    "RowNumber": 11,
+                    "Date": "2025-09-25",
+                    "Homework": "Keksi ja kirjoita 3 kysymystä ja niihin vastaukset liittyen kappaleeseen 9. Kirjoita kysymykset ja vastaukset vihkoon."
+                },
+                {
+                    "RowNumber": 10,
+                    "Date": "2025-09-23",
+                    "Homework": "Lukuläksy kpl 9 ja teht. 1-2"
+                },
+                {
+                    "RowNumber": 9,
+                    "Date": "2025-09-17",
+                    "Homework": "Lukuläksy kpl 8 ja t. 1 ja 2"
+                },
+                {
+                    "RowNumber": 8,
+                    "Date": "2025-09-16",
+                    "Homework": "Lue kpl 7,\r\ntee vihkoon 3 kysymystä kappaleesta ja vastaa niihin."
+                },
+                {
+                    "RowNumber": 7,
+                    "Date": "2025-09-10",
+                    "Homework": "Lukuläksy kpl 6 ja teht. 1-2"
+                },
+                {
+                    "RowNumber": 6,
+                    "Date": "2025-09-09",
+                    "Homework": "Lukuläksy kpl 5 ja teht. 2"
+                },
+                {
+                    "RowNumber": 5,
+                    "Date": "2025-09-03",
+                    "Homework": "Monisteet kappaleeseen 4 (2 kpl)"
+                },
+                {
+                    "RowNumber": 4,
+                    "Date": "2025-08-26",
+                    "Homework": "Lukuläksy kpl 4, teht. 1-2 valmiiksi"
+                },
+                {
+                    "RowNumber": 3,
+                    "Date": "2025-08-20",
+                    "Homework": "Lukuläksy kpl 3 ja teht. 1-2"
+                },
+                {
+                    "RowNumber": 2,
+                    "Date": "2025-08-13",
+                    "Homework": "Lukuläksy kpl 2 ja teht. 1a-c"
+                },
+                {
+                    "RowNumber": 1,
+                    "Date": "2025-08-12",
+                    "Homework": "Lukuläksy kpl 1 ja teht. 4"
+                }
+            ],
+            "Diary": [
+                {
+                    "RowNumber": 19,
+                    "Date": "2025-11-18",
+                    "Lesson": "19",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 18,
+                    "Date": "2025-11-11",
+                    "Lesson": "18",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 17,
+                    "Date": "2025-11-07",
+                    "Lesson": "17",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 16,
+                    "Date": "2025-10-29",
+                    "Lesson": "16",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 15,
+                    "Date": "2025-10-28",
+                    "Lesson": "15",
+                    "Note": "kpl 12",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 14,
+                    "Date": "2025-10-14",
+                    "Lesson": "14",
+                    "Note": "Koe",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 13,
+                    "Date": "2025-10-08",
+                    "Lesson": "13",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 12,
+                    "Date": "2025-09-30",
+                    "Lesson": "12",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 11,
+                    "Date": "2025-09-25",
+                    "Lesson": "11",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 10,
+                    "Date": "2025-09-23",
+                    "Lesson": "10",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 9,
+                    "Date": "2025-09-17",
+                    "Lesson": "9",
+                    "Note": "",
+                    "TeacherId": 7711,
+                    "TeacherName": "Wallin Simo",
+                    "TeacherCode": "WalliSi"
+                },
+                {
+                    "RowNumber": 8,
+                    "Date": "2025-09-16",
+                    "Lesson": "8",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 7,
+                    "Date": "2025-09-10",
+                    "Lesson": "7",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 6,
+                    "Date": "2025-09-09",
+                    "Lesson": "6",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 5,
+                    "Date": "2025-09-03",
+                    "Lesson": "5",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 4,
+                    "Date": "2025-08-26",
+                    "Lesson": "4",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 3,
+                    "Date": "2025-08-20",
+                    "Lesson": "3",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 2,
+                    "Date": "2025-08-13",
+                    "Lesson": "2",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 1,
+                    "Date": "2025-08-12",
+                    "Lesson": "1",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                }
+            ],
+            "Exams": [
+                {
+                    "Id": 590701,
+                    "Date": "2025-10-14",
+                    "Name": "Jakso 2: Arjen teknologiaa",
+                    "Info": "Koealue Pisara kpl 5-10 ja vihkon muistiinpanot",
+                    "Grade": "7+",
+                    "VerbalGrade": "Koetuki: tehtävät 2 ja 4"
+                },
+                {
+                    "Id": 602101,
+                    "Date": "2025-11-25",
+                    "Name": "Läksynkysely",
+                    "Info": "Läksynkysely: maanosat ja ilmansuunnat",
+                    "Grade": "8",
+                    "VerbalGrade": ""
+                },
+                {
+                    "Id": 598821,
+                    "Date": "2025-11-26",
+                    "Name": "Ympäristöopin koe",
+                    "Info": "Ympäristöopin Pisara- kirjasta jakso 3 Planeetta maa kappaleet 11-14 sekä vihkomuistiinpanot",
+                    "Grade": "7-",
+                    "VerbalGrade": ""
+                }
+            ]
+        },
+        {
+            "Id": 1096581,
+            "CourseId": 66174,
+            "CourseName": "ÄI 5 lk syksy",
+            "CourseCode": "ÄI5s",
+            "Name": "ÄI",
+            "Caption": "ÄI ÄI5s",
+            "StartDate": "2025-08-06",
+            "EndDate": "2025-12-19",
+            "Committed": false,
+            "Teachers": [
+                {
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "TeacherId": 7711,
+                    "TeacherName": "Wallin Simo",
+                    "TeacherCode": "WalliSi"
+                },
+                {
+                    "TeacherId": 9456,
+                    "TeacherName": "Suomalainen Johanna",
+                    "TeacherCode": "SuomaJo"
+                }
+            ],
+            "Homework": [
+                {
+                    "RowNumber": 10,
+                    "Date": "2025-12-04",
+                    "Homework": "Kuiskeen lukutaito lukuläksy  s. 48-52 ja teht. 1-3"
+                },
+                {
+                    "RowNumber": 9,
+                    "Date": "2025-11-27",
+                    "Homework": "Kertausmoniste Liite 9"
+                },
+                {
+                    "RowNumber": 8,
+                    "Date": "2025-11-25",
+                    "Homework": "s. 41 t. 6 ja s. 42 t. 1-3"
+                },
+                {
+                    "RowNumber": 7,
+                    "Date": "2025-11-14",
+                    "Homework": "Kuiskeen lukutaito s. 444-45 ja teht.1-2"
+                },
+                {
+                    "RowNumber": 5,
+                    "Date": "2025-09-18",
+                    "Homework": "Taitojen vihko s.19 lisätehtävä vihkoon. Keksi ja kirjoita kouluun liittyviä virkkeitä (5 kpl), joissa on sekä pää-että sivulause."
+                },
+                {
+                    "RowNumber": 4,
+                    "Date": "2025-09-15",
+                    "Homework": "Kuiskeen lukutaito s. 20-21 lukuläksy ja teht. 2"
+                },
+                {
+                    "RowNumber": 3,
+                    "Date": "2025-09-05",
+                    "Homework": "Ei läksyä"
+                },
+                {
+                    "RowNumber": 2,
+                    "Date": "2025-09-02",
+                    "Homework": "Taitojen vihko s. 13 teht. 1-2"
+                }
+            ],
+            "Diary": [
+                {
+                    "RowNumber": 10,
+                    "Date": "2025-12-04",
+                    "Lesson": "10",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 9,
+                    "Date": "2025-11-27",
+                    "Lesson": "9",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 8,
+                    "Date": "2025-11-25",
+                    "Lesson": "8",
+                    "Note": "s. 40-41",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 7,
+                    "Date": "2025-11-14",
+                    "Lesson": "7",
+                    "Note": "Murteet",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 6,
+                    "Date": "2025-10-15",
+                    "Lesson": "6",
+                    "Note": "Sanelu",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 5,
+                    "Date": "2025-09-18",
+                    "Lesson": "5",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 4,
+                    "Date": "2025-09-15",
+                    "Lesson": "4",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 3,
+                    "Date": "2025-09-05",
+                    "Lesson": "3",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 2,
+                    "Date": "2025-09-02",
+                    "Lesson": "2",
+                    "Note": "Hyötyjuttu",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 1,
+                    "Date": "2025-08-22",
+                    "Lesson": "1",
+                    "Note": "Lukutunti ja Lasten uutiset",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                }
+            ],
+            "Exams": [
+                {
+                    "Id": 582864,
+                    "Date": "2025-08-25",
+                    "Name": "",
+                    "Info": "Sanelu 1",
+                    "Grade": "5-",
+                    "VerbalGrade": ""
+                },
+                {
+                    "Id": 585771,
+                    "Date": "2025-09-18",
+                    "Name": "",
+                    "Info": "Kierikki-tarinat\r\nArviointi asteikolla  T6-7, H 8, K 9-10",
+                    "Grade": "t",
+                    "VerbalGrade": "- erisnimet, päättömerkit, yhdyssanat, kappalejako"
+                },
+                {
+                    "Id": 585032,
+                    "Date": "2025-10-02",
+                    "Name": "Äidinkielen koe",
+                    "Info": "Kielitiedon koe, Kuiskeen taitojen vihko s. 8- 21.\r\nAiheena pää- ja sivulause, sanojen oikeinkirjoitus mm. erisnimet ja yhdyssanat.",
+                    "Grade": "6-",
+                    "VerbalGrade": ""
+                },
+                {
+                    "Id": 596877,
+                    "Date": "2025-11-06",
+                    "Name": "Luetun ymmärtäminen",
+                    "Info": "Luetun ymmärtäminen, tietoteksti Romanien kansallispäivä",
+                    "Grade": "7-",
+                    "VerbalGrade": ""
+                },
+                {
+                    "Id": 596876,
+                    "Date": "2025-11-13",
+                    "Name": "Kielitiedon koe jaksosta 2",
+                    "Info": "Koealue: Taitojen vihko s. 26-37, sanaluokat ja sijamuodot sekä verbien aikamuodot.",
+                    "Grade": "6+",
+                    "VerbalGrade": ""
+                },
+                {
+                    "Id": 597533,
+                    "Date": "2025-12-01",
+                    "Name": "Kielitiedon koe",
+                    "Info": "Lauseenjäsennys Taitojen vihko s. 38"
+                }
+            ]
+        },
+        {
+            "Id": 1096584,
+            "CourseId": 66174,
+            "CourseName": "ÄI 5 lk syksy",
+            "CourseCode": "ÄI5s",
+            "Name": "ÄI.A",
+            "Caption": "ÄI.A ÄI5s",
+            "StartDate": "2025-08-06",
+            "EndDate": "2025-12-19",
+            "Committed": false,
+            "Teachers": [
+                {
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "TeacherId": 7711,
+                    "TeacherName": "Wallin Simo",
+                    "TeacherCode": "WalliSi"
+                }
+            ],
+            "Homework": [
+                {
+                    "RowNumber": 9,
+                    "Date": "2025-11-10",
+                    "Homework": "Taitojen vihko s. 35-36 teht. 2-4"
+                },
+                {
+                    "RowNumber": 8,
+                    "Date": "2025-11-03",
+                    "Homework": "s. 33 valmiiksi"
+                },
+                {
+                    "RowNumber": 7,
+                    "Date": "2025-10-27",
+                    "Homework": "Taitojen vihko s. 31-32 teht. 1-3"
+                },
+                {
+                    "RowNumber": 6,
+                    "Date": "2025-10-06",
+                    "Homework": "Lukuläksy s. 32-34 ja teht. 1-2"
+                },
+                {
+                    "RowNumber": 5,
+                    "Date": "2025-09-22",
+                    "Homework": "Lukuläksy Kuiskeen lukutaito s. 24-26 ja teht. 2 s27"
+                },
+                {
+                    "RowNumber": 4,
+                    "Date": "2025-09-08",
+                    "Homework": "Kuiskeen lukutaito  s. 19 teht. 1-2"
+                },
+                {
+                    "RowNumber": 3,
+                    "Date": "2025-08-25",
+                    "Homework": "Ei läksyä"
+                },
+                {
+                    "RowNumber": 2,
+                    "Date": "2025-08-18",
+                    "Homework": " Taitojen vihkos. 11 teht.6"
+                },
+                {
+                    "RowNumber": 1,
+                    "Date": "2025-08-11",
+                    "Homework": "Kuiske taitojen vihko s. 9-10 teht. 1-3"
+                }
+            ],
+            "Diary": [
+                {
+                    "RowNumber": 9,
+                    "Date": "2025-11-10",
+                    "Lesson": "9",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 8,
+                    "Date": "2025-11-03",
+                    "Lesson": "8",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 7,
+                    "Date": "2025-10-27",
+                    "Lesson": "7",
+                    "Note": "Sijamuodot",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 6,
+                    "Date": "2025-10-06",
+                    "Lesson": "6",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 5,
+                    "Date": "2025-09-22",
+                    "Lesson": "5",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 4,
+                    "Date": "2025-09-08",
+                    "Lesson": "4",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 3,
+                    "Date": "2025-08-25",
+                    "Lesson": "3",
+                    "Note": "Sanelu",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 2,
+                    "Date": "2025-08-18",
+                    "Lesson": "2",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                },
+                {
+                    "RowNumber": 1,
+                    "Date": "2025-08-11",
+                    "Lesson": "1",
+                    "Note": "",
+                    "TeacherId": 318,
+                    "TeacherName": "Luukkonen Hannele",
+                    "TeacherCode": "LuukkHa"
+                }
+            ],
+            "Exams": []
+        }
+    ]
+}
