@@ -1,6 +1,6 @@
 {
   "name": "wilma-api",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Pure TypeScript library for Wilma school information system API interaction and parsing",
   "keywords": [
     "wilma",
