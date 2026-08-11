@@ -21,6 +21,16 @@ export interface SchoolAndClass {
  */
 export interface ChildWithSchool extends ChildEntry, SchoolAndClass {}
 
+const NAV_KEYWORDS = [
+  'messages', 'viestit',
+  'schedule', 'lukujarjestys', 'lukujärjestys',
+  'gradebook', 'assessments',
+  'exams',
+  'attendance', 'poissaolot',
+  'printouts',
+  'news',
+];
+
 /**
  * Parser utilities for child-related data
  */
@@ -30,43 +40,45 @@ export class ChildParser {
     const $ = cheerio.load(html);
     const entries = new Map<string, string | null>();
 
-    // Use exact query for child links: look for <a> tags with href="/!{childId}"
-    $('a[href*="/!"]').each((_, el) => {
+    $('a[href^="/!"]').each((_, el) => {
       const href = $(el).attr('href') || '';
       const match = href.match(/\/!([0-9]+)(\/|$)/);
-      
+
       if (match && match[1]) {
         const childId = match[1];
-        
-        // Extract name by removing <small> and <span> tags
+
+        if (entries.has(childId)) {
+          return;
+        }
+
         let name: string | null = null;
         try {
           const $el = $(el);
           const clone = $el.clone();
           clone.find('small').remove();
-          clone.find('span').remove();
+          clone.find('span.lem').remove();
           name = clone.text().trim() || null;
         } catch (err) {
           console.warn('[Wilma] Failed to extract child name from HTML element:', err instanceof Error ? err.message : String(err));
           name = null;
         }
 
-        const existingName = entries.get(childId);
-        if (name && name.length > 0) {
-          entries.set(childId, name);
-        } else if (!existingName) {
-          entries.set(childId, null);
+        if (name && NAV_KEYWORDS.some(kw => name.toLowerCase().includes(kw))) {
+          return;
         }
+
+        entries.set(childId, name);
       }
     });
 
     return Array.from(entries.entries()).map(([id, name]) => ({ id, name }));
   }
+
   /**
    * Extract all children with their school and class information from landing page HTML
    * Convenience method that combines extractChildEntries and extractChildSchoolAndClass
    * @param html - The landing page HTML
-   * @returns Array of children with id, name, schoolName, and className
+   * @returns Array of children with id, name, schoolName, and className (empty if no children found)
    */
   static extractChildren(html: string): ChildWithSchool[] {
     const children = this.extractChildEntries(html);
@@ -75,7 +87,7 @@ export class ChildParser {
       ...this.extractChildSchoolAndClass(html, child.id)
     }));
   }
-  
+
   /** Extract school name and class name for a specific child from landing page HTML */
   static extractChildSchoolAndClass(html: string, childId: string): SchoolAndClass {
     const $ = cheerio.load(html);
@@ -100,6 +112,4 @@ export class ChildParser {
 
     return { schoolName, className };
   }
-
-
 }
