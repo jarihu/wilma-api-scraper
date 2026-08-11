@@ -2,6 +2,8 @@
 
 Pure TypeScript, class-based library for Wilma school information system API interaction and parsing.
 
+> **v0.2.0 — Breaking changes.** Several interfaces gained new required fields. If you construct `HomeworkEntry`, `OverviewExam`, `ExamEntry`, or `Overview` objects manually, your code may need updates. See the updated type definitions below.
+
 ## Features
 
 - Class-based services: `WilmaHttpClient`, `WilmaAuthClient`, `ExamsClient`, `MessagesClient`, `OverviewClient`, `MessageDetailService`, `OverviewParser`, `ChildParser`, `HomeworkExtractor`
@@ -176,6 +178,9 @@ interface Overview {
   role: string;                    // User role (e.g., "guardian")
   schedule: ScheduleEntry[];       // Timetable/schedule data
   groups: OverviewGroup[];         // Courses with homework/exams/diary
+  upcomingExams: UpcomingExam[];   // Flat list of future, ungraded exams
+  grades: GradeEntry[];            // Graded exams
+  homework: HomeworkEntry[];       // All homework across all groups, newest first
 }
 
 interface OverviewGroup {
@@ -191,6 +196,60 @@ interface OverviewGroup {
   homework: HomeworkEntry[];       // Homework assignments
   diary: DiaryEntry[];            // Lesson notes
   exams: OverviewExam[];          // Upcoming exams
+}
+
+interface HomeworkEntry {
+  rowNumber: number;
+  date: string;
+  homework: string;
+  subject: string;
+  subjectCode: string;
+  teacher: Teacher;
+}
+
+interface Teacher {
+  id?: number;
+  name: string;
+  code: string;
+}
+
+interface OverviewExam {
+  examId: number;
+  date: string;
+  dateIso: string;
+  subject: string;
+  subjectCode: string;
+  teachers: string[];
+  summary: string;
+  description: string | null;
+  name: string;
+  topic: string | null;
+  grade: string | null;
+}
+
+interface UpcomingExam {
+  examId: number;
+  date: string;
+  dateIso: string;
+  name: string;
+  subject: string;
+  subjectCode: string;
+  topic: string | null;
+  teacher: string;
+  teacherCode: string;
+}
+
+interface GradeEntry {
+  examId: number;
+  date: string;
+  dateIso: string;
+  name: string;
+  subject: string;
+  subjectCode: string;
+  grade: string;
+  info: string | null;
+  teacher: string;
+  teacherCode: string;
 }
 
 interface ScheduleEntry {
@@ -222,7 +281,7 @@ interface ScheduleEntry {
 
 ### HomeworkExtractor
 
-- `HomeworkExtractor.extractHomework(overviewData)` → extract homework from last 7 days
+- `HomeworkExtractor.extractHomework(overviewData, daysBack?)` → extract homework from last N days (default 7)
 
 ## Child parsing
 
