@@ -49,8 +49,13 @@ export class ChildParser {
         } catch (_e) {
           name = null;
         }
-        
-        entries.set(childId, name);
+
+        const existingName = entries.get(childId);
+        if (name && name.length > 0) {
+          entries.set(childId, name);
+        } else if (!existingName) {
+          entries.set(childId, null);
+        }
       }
     });
 
