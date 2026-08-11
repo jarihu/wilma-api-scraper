@@ -2,7 +2,8 @@ import { parse } from 'date-fns';
 import { fi } from 'date-fns/locale';
 import { AxiosInstance } from 'axios';
 import { URL } from 'url';
-import { WilmaHttpClient } from './http.js';
+import { WilmaHttpClient, formatError } from './http.js';
+import { WilmaParseError } from './errors.js';
 
 /**
  * Teacher information
@@ -340,8 +341,8 @@ export class OverviewClient {
       if (apiRes && apiRes.data && typeof apiRes.data === 'object') {
         return OverviewParser.parseOverviewJson(apiRes.data, childId);
       }
-    } catch (_e) {
-      // fall through to legacy HTML form flow
+    } catch (err) {
+      console.warn('[Wilma] Failed to fetch overview via JSON API, falling back to HTML:', formatError(err));
     }
 
     const url = new URL(`!${childId}/overview`, this.baseUrl).toString();
@@ -355,7 +356,7 @@ export class OverviewClient {
     // Extract formkey from the HTML page
     const formkey = this.extractFormKey(pageRes.data, childId);
     if (!formkey) {
-      throw new Error('Failed to extract formkey from child home page');
+      throw new WilmaParseError('Failed to extract formkey from child home page');
     }
     
     // Use current date if not provided
@@ -393,8 +394,8 @@ export class OverviewClient {
       if (apiRes && apiRes.data && typeof apiRes.data === 'object') {
         return apiRes.data;
       }
-    } catch (_e) {
-      // fallback to legacy form flow
+    } catch (err) {
+      console.warn('[Wilma] Failed to fetch raw overview via JSON API, falling back to HTML:', formatError(err));
     }
 
     const url = new URL(`!${childId}/overview`, this.baseUrl).toString();
@@ -409,7 +410,7 @@ export class OverviewClient {
     const formkey = this.extractFormKey(pageRes.data, childId);
 
     if (!formkey) {
-      throw new Error('Failed to extract formkey from child home page');
+      throw new WilmaParseError('Failed to extract formkey from child home page');
     }
 
     // Use current date if not provided

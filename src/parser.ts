@@ -46,7 +46,8 @@ export class ChildParser {
           clone.find('small').remove();
           clone.find('span').remove();
           name = clone.text().trim() || null;
-        } catch (_e) {
+        } catch (err) {
+          console.warn('[Wilma] Failed to extract child name from HTML element:', err instanceof Error ? err.message : String(err));
           name = null;
         }
 

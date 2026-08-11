@@ -6,7 +6,7 @@ import * as cheerio from 'cheerio';
 import { AxiosInstance } from 'axios';
 import { URL } from 'url';
 import { MessageDetailService, MessageDetail } from './messages_detail_helper.js';
-import { WilmaHttpClient } from './http.js';
+import { WilmaHttpClient, formatError } from './http.js';
 
 export interface MessageListItem {
   id: string;
@@ -41,7 +41,8 @@ export class MessagesClient {
         if (typeof raw === 'string') {
           try {
             raw = JSON.parse(raw);
-          } catch (_e) {
+          } catch (err) {
+            console.warn('[Wilma] Failed to parse messages JSON response:', formatError(err));
             raw = null;
           }
         }
@@ -75,8 +76,8 @@ export class MessagesClient {
               try {
                 const d = await this.detailService.fetch(childId, String(id));
                 details.push(d);
-              } catch (_e) {
-                // ignore failed detail fetch
+              } catch (err) {
+                console.warn('[Wilma] Failed to fetch message detail for message', id, ':', formatError(err));
               }
               filtered.push({ id: String(id), subject, from, date: dateRaw });
             }
@@ -85,8 +86,8 @@ export class MessagesClient {
           return { list: filtered, details };
         }
       }
-    } catch (_e) {
-      // fall back to HTML parsing
+    } catch (err) {
+      console.warn('[Wilma] Failed to fetch messages via JSON API, falling back to HTML:', formatError(err));
     }
 
     const messagesUrl = new URL(`!${childId}/messages`, this.baseUrl).toString();
@@ -145,15 +146,15 @@ export class MessagesClient {
             include = true;
             details.push(d);
           }
-        } catch (_e) {
-          // ignore detail fetch failures
-        }
-      } else {
-        try {
-          const d = await this.detailService.fetch(childId, msg.id);
-          details.push(d);
-        } catch (_e) {
-          // ignore detail fetch failures
+          } catch (err) {
+            console.warn('[Wilma] Failed to fetch message detail for message', msg.id, ':', formatError(err));
+          }
+        } else {
+          try {
+            const d = await this.detailService.fetch(childId, msg.id);
+            details.push(d);
+          } catch (err) {
+            console.warn('[Wilma] Failed to fetch message detail for message', msg.id, ':', formatError(err));
         }
       }
 

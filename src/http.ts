@@ -23,6 +23,21 @@ export class WilmaHttpClient {
     wrapper(this.client);
     (this.client as any).defaults.jar = this.jar;
     (this.client as any).defaults.withCredentials = true;
+
+    // Centralized response logging: warn on all non-2xx responses
+    this.client.interceptors.response.use(
+      (response) => {
+        if (response.status < 200 || response.status >= 300) {
+          const method = response.config.method?.toUpperCase() || '?';
+          console.warn(`[Wilma] HTTP ${response.status} on ${method} ${response.config.url}`);
+        }
+        return response;
+      },
+      (error) => {
+        console.warn('[Wilma] HTTP request failed:', formatError(error));
+        return Promise.reject(error);
+      }
+    );
   }
 
   /** Create a new HTTP client instance */
@@ -101,4 +116,9 @@ export function createWilmaClient(): { client: AxiosInstance; jar: CookieJar } {
 
 export function userAgent(): string {
   return WilmaHttpClient.userAgent();
+}
+
+export function formatError(error: unknown): string {
+  if (error instanceof Error) return error.message;
+  return String(error);
 }

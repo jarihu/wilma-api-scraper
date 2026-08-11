@@ -1,6 +1,7 @@
 import { AxiosInstance, AxiosResponse } from 'axios';
-import { WilmaHttpClient, userAgent } from './http.js';
+import { WilmaHttpClient, userAgent, formatError } from './http.js';
 import { URL } from 'url';
+import { WilmaAuthError } from './errors.js';
 import { ChildParser, ChildWithSchool } from './parser.js';
 import { ExamsClient } from './exams.js';
 import { MessagesClient } from './messages.js';
@@ -91,7 +92,7 @@ export class WilmaAuthClient {
         return { token: tokenValue, sessionValue, sessionCookieName };
       }
     } catch (err) {
-      // Fall through to old API format
+      console.warn('[Wilma] Failed to fetch token via /index_json, trying legacy endpoint:', formatError(err));
     }
 
     // Fall back to old API format (/token endpoint with set-cookie headers)
@@ -128,8 +129,8 @@ export class WilmaAuthClient {
 
       tokenValue = res.data?.Wilma2LoginID || res.data?.token || '';
     } catch (err) {
-      // Both APIs failed
-      throw new Error('Failed to fetch token from Wilma server (neither /index_json nor /token endpoints available)');
+      console.warn('[Wilma] Failed to fetch token via /token:', formatError(err));
+      throw new WilmaAuthError('Failed to fetch token from Wilma server (neither /index_json nor /token endpoints available)');
     }
 
     return {
@@ -150,7 +151,7 @@ export class WilmaAuthClient {
     const tokenResponse = await this.fetchToken();
 
     if (!tokenResponse.sessionValue) {
-      throw new Error('Failed to obtain session token from Wilma server');
+      throw new WilmaAuthError('Failed to obtain session token from Wilma server');
     }
 
     this.sessionValue = tokenResponse.sessionValue;
@@ -190,7 +191,7 @@ export class WilmaAuthClient {
       return html;
     }
 
-    throw new Error(`Login failed with status ${res.status}`);
+    throw new WilmaAuthError(`Login failed with status ${res.status}`, res.status);
   }
 
   /**
@@ -208,7 +209,7 @@ export class WilmaAuthClient {
     });
 
     if (res.status !== 200) {
-      throw new Error(`Failed to fetch landing page: ${res.status}`);
+      throw new WilmaAuthError(`Failed to fetch landing page: ${res.status}`, res.status);
     }
 
     this.parseAndStoreChildren(res.data);
