@@ -337,7 +337,7 @@ export class OverviewClient {
     try {
       const apiUrl = new URL(`/overview_json?child=${childId}`, this.baseUrl).toString();
       const apiRes = await this.client.get(apiUrl, { headers: { 'User-Agent': WilmaHttpClient.userAgent() } });
-      if (apiRes && apiRes.data) {
+      if (apiRes && apiRes.data && typeof apiRes.data === 'object') {
         return OverviewParser.parseOverviewJson(apiRes.data, childId);
       }
     } catch (_e) {
@@ -390,7 +390,7 @@ export class OverviewClient {
     try {
       const apiUrl = new URL(`/overview_json?child=${childId}`, this.baseUrl).toString();
       const apiRes = await this.client.get(apiUrl, { headers: { 'User-Agent': WilmaHttpClient.userAgent() } });
-      if (apiRes && apiRes.data) {
+      if (apiRes && apiRes.data && typeof apiRes.data === 'object') {
         return apiRes.data;
       }
     } catch (_e) {
